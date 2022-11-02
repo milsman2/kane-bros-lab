@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kane-bros-lab
+  annotations:
+    cert-manager.io/cluster-issuer: 'prod-issuer-amd64'
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - kanebroslab.com
+    secretName: kane-bros-lab-tls-v1
+  rules:
+  - host: kanebroslab.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: kane-bros-lab
+            port:
+              number: 3000

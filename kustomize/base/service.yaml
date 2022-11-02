@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kane-bros-lab
+spec:
+  type: ClusterIP
+  selector:
+    app: kane-bros-lab
+  ports:
+    - port: 80
+      targetPort: 3000
+      protocol: TCP

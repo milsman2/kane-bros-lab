@@ -7,7 +7,7 @@ const Index: NextPageWithLayout = () => {
       <h2>Kane Bros. Lab</h2>
       <p>This is just a placeholder while I learn some Typescript and Next.js</p>
       <p>More coming soon!</p>
-      <p>Pipeline Test!</p>
+      <p>Pipeline Test! With Notifications!</p>
     </section>
   )
 }

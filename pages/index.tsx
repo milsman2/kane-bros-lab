@@ -24,10 +24,10 @@ export default function Home({
             <span className="font-semibold text-xl tracking-tight">Kane Bros. Lab</span>
           </div>
         </nav>
-        <div className='flex flex-columns flex-1 items-center justify-center'>
-          <h2 className='text-lg text-gray-400'>
-            Kane Bros. Lab landing page has {stars} ⭐️ on Github.
-          </h2>
+        <h2 className='flex flex-col flex-1 items-center justify-center text-lg text-gray-400'>
+          Kane Bros. Lab landing page has {stars} ⭐️ on Github.
+        </h2>
+        <div className='flex items-center justify-center'>
           <a href='https://blog.kanebroslab.com' className='text-blue-400'>
             Check out the blog where I document my infrastucture.
           </a>

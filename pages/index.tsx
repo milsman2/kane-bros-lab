@@ -24,8 +24,13 @@ export default function Home({
             <span className="font-semibold text-xl tracking-tight">Kane Bros. Lab</span>
           </div>
         </nav>
-        <div className='flex flex-column flex-1 items-center justify-center'>
-          <p>Kane Bros. Lab landing page has {stars} ⭐️ on Github.</p>
+        <div className='flex flex-columns flex-1 items-center justify-center'>
+          <h2 className='text-lg text-gray-400'>
+            Kane Bros. Lab landing page has {stars} ⭐️ on Github.
+          </h2>
+          <a href='https://blog.kanebroslab.com' className='text-blue-400'>
+            Check out the blog where I document my infrastucture.
+          </a>
         </div>
         <footer className='flex flex-wrap justify-center items-center p-4 bg-black mt-auto text-white'>
           <a className='text-white ml-5 href=https://blog.kanebroslab.com'>Brought to you by Kane Bros. Lab</a>

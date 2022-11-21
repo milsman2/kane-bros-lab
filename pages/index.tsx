@@ -27,13 +27,8 @@ export default function Home({
         <h2 className='flex flex-col flex-1 items-center justify-center text-lg text-gray-400'>
           Kane Bros. Lab landing page has {stars} ⭐️ on Github.
         </h2>
-        <div className='flex items-center justify-center'>
-          <a href='https://blog.kanebroslab.com' className='text-blue-400'>
-            Check out the blog where I document my infrastucture.
-          </a>
-        </div>
         <footer className='flex flex-wrap justify-center items-center p-4 bg-black mt-auto text-white'>
-          <a className='text-white ml-5 href=https://blog.kanebroslab.com'>Brought to you by Kane Bros. Lab</a>
+          <a className='text-white ml-5' href='https://blog.kanebroslab.com'>Brought to you by Kane Bros. Lab</a>
         </footer>
     </div>
   )

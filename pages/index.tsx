@@ -24,7 +24,7 @@ export default function Home({
             <span className="font-semibold text-xl tracking-tight">Kane Bros. Lab</span>
           </div>
         </nav>
-        <h2 className='flex flex-col flex-1 items-center justify-center text-lg text-gray-400'>
+        <h2 className='flex flex-col flex-1 items-center justify-center text-lg text-gray-300'>
           Kane Bros. Lab landing page has {stars} ⭐️ on Github.
         </h2>
         <footer className='flex flex-wrap justify-center items-center p-4 bg-black mt-auto text-white'>

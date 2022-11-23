@@ -10,7 +10,7 @@ export default function Layout({ children }: LayoutProps) {
       <Head>
         <title>Layouts Example</title>
       </Head>
-      <main className='bg-black text-white h-screen flex flex-col'>{children}</main>
+      <main className='min-h-screen flex flex-col'>{children}</main>
     </>
   )
 }

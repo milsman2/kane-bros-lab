@@ -15,12 +15,12 @@ export default function api(req: NextApiRequest, res: NextApiResponse) {
       .then(data => {
         setTimeout(() => {
           res.json(data)
-        }, 2000)
+        }, 100)
       })
 
     return
   }
   setTimeout(() => {
     res.json(projects)
-  }, 2000)
+  }, 100)
 }

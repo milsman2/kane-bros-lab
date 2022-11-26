@@ -13,7 +13,6 @@ const Index: NextPageWithLayout = () => {
 
   return (
     <div className='bg-black text-white flex flex-col flex-1'>
-      <p className='text-xl'>ILY Rachel</p>
       <h1>Trending Projects</h1>
       {data2}
       <div>

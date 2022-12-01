@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import { useQuery } from 'react-query'
@@ -15,7 +14,7 @@ const getPersonById = async (id: string | string[] | undefined): Promise<IPerson
     throw new Error('invalid id')
 }
 
-const PersonPage: FC = () => {
+const PersonPage = () => {
     const {
         query: {id},
     } = useRouter()

@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import { useQuery, UseQueryResult } from 'react-query'
 import { IPerson } from '../../src/lib/interfaces/IPerson'
 
@@ -11,7 +10,7 @@ export const fetchPerson = async (): Promise<IPerson> => {
     throw new Error('Network response not ok')
 }
 
-const PersonPage: FC = () => {
+const PersonPage = () => {
     const { isLoading, isError, error, data }: UseQueryResult<IPerson, Error> = useQuery<IPerson, Error, IPerson, string>(
         'person',
         fetchPerson,

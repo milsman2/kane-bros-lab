@@ -1,24 +1,24 @@
-import type { NextPageWithLayout } from './_app'
-import Layout from '../components/layout'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import { FC } from 'react';
+import Head from 'next/head';
+import Footer from '../src/components/footer'
+import Header from '../src/components/header'
+import PersonPage from '../pages/person'
 
-const Index: NextPageWithLayout = () => {
+const Home: FC = () => {
   return (
-    <div className='bg-black text-white flex flex-col flex-1'>
-      <h1>Hello world with React-Query.</h1>
-    </div>
-  )
-}
+    <div className='flex flex-col flex-1 bg-black text-white min-h-screen'>
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-export default Index
-
-Index.getLayout = function getLayout(page: React.ReactElement) {
-  return (
-    <Layout>
       <Header />
-      {page}
+      <main className='flex flex-col flex-1 justify-center items-center'>
+        <PersonPage />
+      </main>
       <Footer />
-    </Layout>
-  )
-}
+    </div>
+  );
+};
+
+export default Home;

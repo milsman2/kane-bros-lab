@@ -2,6 +2,8 @@ import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import { useQuery } from 'react-query'
 import { IPerson } from '../../src/lib/interfaces/IPerson'
+import type { NextPageWithLayout } from '../_app'
+import Layout from '../../components/Layout'
 
 const getPersonById = async (id: string | string[] | undefined): Promise<IPerson> => {
     if (typeof id === 'string') {
@@ -14,7 +16,7 @@ const getPersonById = async (id: string | string[] | undefined): Promise<IPerson
     throw new Error('invalid id')
 }
 
-const PersonPage = () => {
+const PersonPage: NextPageWithLayout = () => {
     const {
         query: {id},
     } = useRouter()
@@ -43,3 +45,11 @@ const PersonPage = () => {
 }
 
 export default PersonPage
+
+PersonPage.getLayout = function getLayout(page: React.ReactElement) {
+    return (
+      <Layout>
+        {page}
+      </Layout>
+    )
+}

@@ -1,5 +1,7 @@
 import { useQuery, UseQueryResult } from 'react-query'
 import { IPerson } from '../../src/lib/interfaces/IPerson'
+import Layout from '../../components/Layout'
+import { NextPageWithLayout } from '../_app';
 
 export const fetchPerson = async (): Promise<IPerson> => {
     const res = await fetch('/api/person');
@@ -10,7 +12,7 @@ export const fetchPerson = async (): Promise<IPerson> => {
     throw new Error('Network response not ok')
 }
 
-const PersonPage = () => {
+const PersonPage: NextPageWithLayout = () => {
     const { isLoading, isError, error, data }: UseQueryResult<IPerson, Error> = useQuery<IPerson, Error, IPerson, string>(
         'person',
         fetchPerson,
@@ -36,3 +38,11 @@ const PersonPage = () => {
 }
 
 export default PersonPage
+
+PersonPage.getLayout = function getLayout(page: React.ReactElement) {
+    return (
+      <Layout>
+        {page}
+      </Layout>
+    )
+}

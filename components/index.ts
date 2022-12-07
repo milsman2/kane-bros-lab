@@ -1,4 +1,5 @@
 export * from './Header'
 export * from './Footer'
 export * from './Layout'
-export * from './PersonComponent'
+export * from './Counter'
+export * from './PostList'

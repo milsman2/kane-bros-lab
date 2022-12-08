@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useIpAddress } from '../../hooks/useIp'
 
 export const IpAddress = () => {

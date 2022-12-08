@@ -4,7 +4,7 @@ import { useIpAddress } from '../../hooks/useIp'
 export const IpAddress = () => {
   const { data, isLoading } = useIpAddress()
   
-  if (isLoading) return <div>Loading</div>
+  if (isLoading) return <div>Loading your IP address...</div>
 
   return (
     <section>

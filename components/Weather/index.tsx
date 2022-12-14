@@ -10,7 +10,7 @@ export const Weather = () => {
   
   return (
       <>
-        <h2>{data.city.name} 3 Hour Weather Forecast</h2>
+        <h2>{data.city.name} Lab 3 Hour Weather Forecast</h2>
         <div>
           {data.list[0].weather[0].description}
         </div>

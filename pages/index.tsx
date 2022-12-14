@@ -1,6 +1,7 @@
 import type { NextPageWithLayout } from './_app'
 import Layout from '../components/Layout'
 import { IpAddress } from '../components'
+import { Weather } from '../components/Weather'
 
 const Home: NextPageWithLayout = () => {
 
@@ -8,6 +9,7 @@ const Home: NextPageWithLayout = () => {
     <div className='bg-black text-white flex flex-col flex-1 items-center justify-center'>
       <div>More Next.js + TypeScript + React-Query coming soon.</div>
       <IpAddress />
+      <Weather />
     </div>
   )
 }

@@ -7,6 +7,7 @@ import {
 } from '@tanstack/react-query';
 import { useState } from 'react';
 import '../styles/globals.css';
+import { ChakraProvider } from '@chakra-ui/react';
 
 export type NextPageWithLayout = NextPage & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
@@ -34,7 +35,9 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   return getLayout(
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <Component {...pageProps} />
+        <ChakraProvider>
+          <Component {...pageProps} />
+        </ChakraProvider>
       </Hydrate>
     </QueryClientProvider>
   );

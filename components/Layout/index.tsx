@@ -1,22 +1,29 @@
-import Head from 'next/head'
-import Footer from './../Footer'
-import Header from './../Header'
+import Head from 'next/head';
+import Footer from './../Footer';
+import Header from './../Header';
 
 type LayoutProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <div className='min-h-screen flex flex-col'>
+      <div className="min-h-screen flex flex-col">
         <Head>
-          <title>Layouts Example</title>
+          <title>
+            Kane Bros. Lab is an incubation effort backed by EaDo Technologies.
+          </title>
+          <meta
+            name="description"
+            content="Kane Bros. Lab is an incubation effort backed by EaDo Technologies."
+            key="desc"
+          />
         </Head>
         <Header />
-        <main className='flex flex-col flex-1'>{children}</main>
+        <main className="flex flex-col flex-1">{children}</main>
         <Footer />
       </div>
     </>
-  )
+  );
 }

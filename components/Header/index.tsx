@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import Link from 'next/link';
 
 const Header = (): ReactElement => {
   return (
@@ -7,6 +8,9 @@ const Header = (): ReactElement => {
         <span className="font-semibold text-xl tracking-tight">
           Kane Bros. Lab
         </span>
+        <Link href="/WeatherPage" className="text-sm ml-4">
+          Lab Weather
+        </Link>
       </div>
     </nav>
   );

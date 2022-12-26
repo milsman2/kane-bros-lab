@@ -18,7 +18,7 @@ spec:
         nodeCategory: worker
       containers:
       - name: kane-bros-lab
-        image: milsman2/kane-bros-lab
+        image: milsman2/kane-bros-lab:v2022.26.12.1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000

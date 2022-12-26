@@ -5,6 +5,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { useState } from 'react';
 import '../styles/globals.css';
 import { ChakraProvider } from '@chakra-ui/react';
@@ -36,6 +37,7 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
         <ChakraProvider>
+          <ReactQueryDevtools initialIsOpen={false} />
           <Component {...pageProps} />
         </ChakraProvider>
       </Hydrate>

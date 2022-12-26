@@ -8,8 +8,8 @@ const Header = (): ReactElement => {
         <span className="font-semibold text-xl tracking-tight">
           Kane Bros. Lab
         </span>
-        <Link href="/WeatherPage" className="text-sm ml-4">
-          Lab Weather
+        <Link href="/BreweryPage" className="text-sm ml-4">
+          Breweries
         </Link>
       </div>
     </nav>

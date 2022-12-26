@@ -17,7 +17,7 @@ export const Breweries = () => {
   if (isError) return <span>Error: {error.message}</span>;
 
   return (
-    <>
+    <div className="flex flex-col flex-1 items-center justify-center">
       <h1 className="text-3xl p-4">Kane Bros. Lab Area Breweries</h1>
       <ul>
         {data.map((brewery: IBrewery) => (
@@ -26,6 +26,6 @@ export const Breweries = () => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };

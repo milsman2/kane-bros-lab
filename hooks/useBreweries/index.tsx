@@ -1,5 +1,6 @@
 import { useQuery, QueryClient, dehydrate } from '@tanstack/react-query';
 import { IBrewery } from '../../src/lib/interfaces/IBreweries';
+import { GetStaticProps } from 'next';
 
 const fetchIBreweries = async (): Promise<IBrewery[]> => {
   const res: IBrewery[] = await (
@@ -9,7 +10,7 @@ const fetchIBreweries = async (): Promise<IBrewery[]> => {
   return res;
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();
 
   await queryClient.prefetchQuery(['IBreweries'], () => fetchIBreweries());
@@ -19,7 +20,7 @@ export async function getStaticProps() {
       dehydratedState: dehydrate(queryClient),
     },
   };
-}
+};
 
 export default function useBreweries() {
   return useQuery<IBrewery[], Error>(['IBreweries'], () => fetchIBreweries());

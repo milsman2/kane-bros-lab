@@ -1,8 +1,9 @@
 import useBreweries from '../../hooks/useBreweries';
 import { Spinner, Heading } from '@chakra-ui/react';
 import { IBrewery } from '../../src/lib/interfaces/IBreweries';
+import { ReactElement } from 'react';
 
-export default function Breweries() {
+export default function Breweries(): ReactElement {
   const { data, error, isLoading, isError } = useBreweries();
 
   if (isLoading)

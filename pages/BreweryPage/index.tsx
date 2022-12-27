@@ -1,6 +1,6 @@
 import { NextPageWithLayout } from '../_app';
 import Layout from '../../components/Layout';
-import { Breweries } from '../../components/Breweries';
+import Breweries from '../../components/Breweries';
 
 const BreweryPage: NextPageWithLayout = () => {
   return (

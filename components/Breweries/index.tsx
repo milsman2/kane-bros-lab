@@ -1,9 +1,8 @@
-import React from 'react';
 import { useBreweries } from '../../hooks/useBreweries';
 import { Spinner, Heading } from '@chakra-ui/react';
 import { IBrewery } from '../../src/lib/interfaces/IBreweries';
 
-export const Breweries = () => {
+export default function Breweries() {
   const { data, error, isLoading, isError } = useBreweries();
 
   if (isLoading)
@@ -28,4 +27,4 @@ export const Breweries = () => {
       </ul>
     </div>
   );
-};
+}

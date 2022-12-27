@@ -1,4 +1,4 @@
-import { useBreweries } from '../../hooks/useBreweries';
+import useBreweries from '../../hooks/useBreweries';
 import { Spinner, Heading } from '@chakra-ui/react';
 import { IBrewery } from '../../src/lib/interfaces/IBreweries';
 

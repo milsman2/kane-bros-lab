@@ -21,8 +21,6 @@ export async function getStaticProps() {
   };
 }
 
-const useBreweries = () => {
+export default function useBreweries() {
   return useQuery<IBrewery[], Error>(['IBreweries'], () => fetchIBreweries());
-};
-
-export { useBreweries };
+}

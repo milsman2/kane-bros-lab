@@ -9,7 +9,7 @@ export default function Header(): ReactElement {
           <Link href="/">Kane Bros. Lab</Link>
         </span>
         <Link href="/BreweryPage" className="text-sm ml-4">
-          Breweries
+          Local Area Breweries
         </Link>
       </div>
     </nav>

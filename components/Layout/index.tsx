@@ -11,9 +11,8 @@ export default function Layout({ children }: LayoutProps) {
     <>
       <div className="min-h-screen flex flex-col">
         <Head>
-          <title>
-            Kane Bros. Lab is an incubation effort backed by EaDo Technologies.
-          </title>
+          <title>Incubated by EaDo Technologies.</title>
+          <link rel="shortcut icon" href="/favicon.ico" />
           <meta
             name="description"
             content="Kane Bros. Lab is an incubation effort backed by EaDo Technologies."

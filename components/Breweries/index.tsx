@@ -1,5 +1,4 @@
 import useBreweries from '../../hooks/useBreweries';
-import { Spinner, Heading } from '@chakra-ui/react';
 import { IBrewery } from '../../src/lib/interfaces/IBreweries';
 import { ReactElement } from 'react';
 
@@ -9,8 +8,7 @@ export default function Breweries(): ReactElement {
   if (isLoading)
     return (
       <div className="flex flex-col flex-1 items-center justify-center">
-        <Spinner />
-        <Heading>Loading the dashboard...</Heading>
+        <h1>Loading the dashboard...</h1>
       </div>
     );
 

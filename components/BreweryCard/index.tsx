@@ -7,9 +7,10 @@ type BreweryProps = {
 
 export function BreweryCard({ brewery }: BreweryProps): ReactElement {
   return (
-    <div className="overflow-hidden rounded-lg shadow-lg flex flex-col flex-wrap p-2">
-      <div className="flex flex-wrap bg-slate-800 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-        {brewery.name}
+    <div className="card bg-slate-800 shadow-xl">
+      <div className="card-body">
+        <h2 className="card-title">{brewery.name}</h2>
+        <p>More information coming soon!</p>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ export default function Layout({ children }: LayoutProps) {
     <>
       <div className="flex flex-col flex-1 h-screen overflow-hidden">
         <Head>
-          <title>Incubated by EaDo Technologies.</title>
+          <title>A Homelab Landing Page</title>
           <link rel="shortcut icon" href="/favicon.ico" />
           <meta
             name="description"

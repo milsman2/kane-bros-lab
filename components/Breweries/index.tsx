@@ -1,6 +1,7 @@
 import useBreweries from '../../hooks/useBreweries';
 import { IBrewery } from '../../src/lib/interfaces/IBreweries';
 import { ReactElement } from 'react';
+import { BreweryCard } from '../BreweryCard';
 
 export default function Breweries(): ReactElement {
   const { data, error, isLoading, isError } = useBreweries();
@@ -16,14 +17,14 @@ export default function Breweries(): ReactElement {
 
   return (
     <div className="flex flex-col flex-1 items-center justify-center">
-      <h1 className="text-3xl p-4">Kane Bros. Lab Area Breweries</h1>
-      <ul>
+      <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-slate-300 md:text-5xl lg:text-6xl">
+        Kane Bros. Lab Area Breweries
+      </h1>
+      <div className="flex-1 flex-col grid grid-cols-3">
         {data.map((brewery: IBrewery) => (
-          <li key={brewery.id}>
-            <ul>{brewery.name}</ul>
-          </li>
+          <BreweryCard key={brewery.id} brewery={brewery} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

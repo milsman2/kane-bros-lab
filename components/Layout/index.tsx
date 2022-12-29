@@ -9,7 +9,7 @@ type LayoutProps = {
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <div className="min-h-screen flex flex-col">
+      <div className="flex flex-col flex-1 h-screen overflow-hidden">
         <Head>
           <title>Incubated by EaDo Technologies.</title>
           <link rel="shortcut icon" href="/favicon.ico" />
@@ -20,7 +20,9 @@ export default function Layout({ children }: LayoutProps) {
           />
         </Head>
         <Header />
-        <main className="flex flex-col flex-1">{children}</main>
+        <main className="flex flex-col flex-1 overflow-y-scroll">
+          {children}
+        </main>
         <Footer />
       </div>
     </>

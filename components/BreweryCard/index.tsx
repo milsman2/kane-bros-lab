@@ -19,6 +19,7 @@ export function BreweryCard({ brewery }: BreweryProps): ReactElement {
             Brewery Site
           </Link>
         </div>
+        <div className="text-sm">Brewery site not always published</div>
       </div>
     </div>
   );

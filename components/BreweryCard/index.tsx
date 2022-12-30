@@ -8,18 +8,23 @@ type BreweryProps = {
 
 export function BreweryCard({ brewery }: BreweryProps): ReactElement {
   return (
-    <div className="card bg-slate-800 shadow-xl">
-      <div className="card-body">
-        <h2 className="card-title">{brewery.name}</h2>
+    <div className="card bg-slate-800 shadow-xl h-full">
+      <div className="card-body flex flex-col flex-1">
+        <h2 className="card-title flex flex-wrap items-center justify-center">
+          {brewery.name}
+        </h2>
         <div className="card-actions justify-center">
-          <Link
-            href={`${brewery?.website_url}`}
-            className="text-slate-200 btn btn-primary"
-          >
-            Brewery Site
-          </Link>
+          {brewery.website_url ? (
+            <Link
+              href={`${brewery?.website_url}`}
+              className="text-slate-200 btn btn-primary"
+            >
+              Brewery Site
+            </Link>
+          ) : (
+            <div className="text-sm">No brewery site available</div>
+          )}
         </div>
-        <div className="text-sm">Brewery site not always published</div>
       </div>
     </div>
   );

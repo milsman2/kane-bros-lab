@@ -20,7 +20,7 @@ export default function Breweries(): ReactElement {
       <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-slate-300 md:text-5xl lg:text-6xl">
         Kane Bros. Lab Area Breweries
       </h1>
-      <div className="flex-1 flex-col grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 items-center gap-8">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 items-center gap-8">
         {data.map((brewery: IBrewery) => (
           <BreweryCard key={brewery.id} brewery={brewery} />
         ))}

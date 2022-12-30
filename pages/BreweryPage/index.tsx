@@ -4,7 +4,7 @@ import Breweries from '../../components/Breweries';
 
 const BreweryPage: NextPageWithLayout = () => {
   return (
-    <div className="bg-black text-slate-400 flex flex-col flex-1 items-center justify-center">
+    <div className="bg-black text-slate-400 flex flex-col flex-1 items-center justify-center p-2">
       <Breweries />
     </div>
   );

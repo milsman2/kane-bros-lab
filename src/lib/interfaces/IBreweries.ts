@@ -13,7 +13,7 @@ export interface IBrewery {
         longitude:       string;
         latitude:        string;
         phone:           string;
-        website_url:     string;
+        website_url:     string | null;
         updated_at:      Date;
         created_at:      Date;
 }

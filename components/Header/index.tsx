@@ -49,7 +49,7 @@ export default function Header(): ReactElement {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <div className="normal-case text-xl">Kane Bros. Lab</div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

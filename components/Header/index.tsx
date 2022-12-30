@@ -49,7 +49,9 @@ export default function Header(): ReactElement {
             </li>
           </ul>
         </div>
-        <div className="normal-case text-xl">Kane Bros. Lab</div>
+        <Link className="normal-case text-xl" href="/">
+          Kane Bros. Lab
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

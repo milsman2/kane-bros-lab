@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Header(): ReactElement {
   return (
-    <div className="navbar bg-slate-900 sticky top-0">
+    <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -26,12 +26,9 @@ export default function Header(): ReactElement {
             tabIndex={0}
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
             <li tabIndex={0}>
               <a className="justify-between">
-                Parent
+                Projects
                 <svg
                   className="fill-current"
                   xmlns="http://www.w3.org/2000/svg"
@@ -44,21 +41,15 @@ export default function Header(): ReactElement {
               </a>
               <ul className="p-2">
                 <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
+                  <Link href="https://thepuntersleague.com">
+                    The Punters League
+                  </Link>
                 </li>
               </ul>
             </li>
-            <li>
-              <a>Item 3</a>
-            </li>
           </ul>
         </div>
-        <Link className="btn btn-ghost normal-case text-xl" href="/">
-          Kane Bros. Lab
-        </Link>
+        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -76,18 +67,16 @@ export default function Header(): ReactElement {
               </svg>
             </a>
             <ul className="p-2">
-              <li>
-                <Link href="https://thepuntersleague.com">
-                  The Punters League
-                </Link>
-              </li>
+              <Link href="https://thepuntersleague.com">
+                The Punters League
+              </Link>
             </ul>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <Link className="btn" href="https://eadotechnologies.com/">
-          Incubated by Eado Technologies
+        <Link className="btn" href="https://eadotechnologies.com">
+          via Eado Tech.
         </Link>
       </div>
     </div>

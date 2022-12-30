@@ -9,7 +9,7 @@ export default function Breweries(): ReactElement {
   if (isLoading)
     return (
       <div className="flex flex-col flex-1 items-center justify-center">
-        <h1>Loading the dashboard...</h1>
+        <button className="btn loading">Loading...</button>
       </div>
     );
 

@@ -7,6 +7,6 @@ export const fetchIBreweries = async (): Promise<IBrewery[]> => {
   ).json();
 };
 
-export default function useBreweries() {
+export function useBreweries() {
   return useQuery<IBrewery[], Error>(['IBreweries'], () => fetchIBreweries());
 }

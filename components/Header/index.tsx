@@ -27,7 +27,7 @@ export default function Header(): ReactElement {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-slate-800 rounded-box w-52"
           >
             <li tabIndex={0}>
-              <a className="justify-between">
+              <div className="justify-between">
                 Projects
                 <svg
                   className="fill-current"
@@ -36,9 +36,11 @@ export default function Header(): ReactElement {
                   height="24"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                  <g>
+                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                  </g>
                 </svg>
-              </a>
+              </div>
               <ul className="p-2">
                 <li>
                   <Link href="https://thepuntersleague.com">
@@ -56,7 +58,7 @@ export default function Header(): ReactElement {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li tabIndex={0}>
-            <a>
+            <div>
               Projects
               <svg
                 className="fill-current"
@@ -65,9 +67,11 @@ export default function Header(): ReactElement {
                 height="20"
                 viewBox="0 0 24 24"
               >
-                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                <g>
+                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                </g>
               </svg>
-            </a>
+            </div>
             <ul className="p-2">
               <Link href="https://thepuntersleague.com">
                 The Punters League

@@ -33,7 +33,7 @@ const Brewery: NextPageWithLayout = () => {
   const { data, error, isLoading, isError } = useBreweries();
   const router = useRouter();
   const { id } = router.query;
-  const filteredBrewery = data?.filter(
+  const filteredBreweries = data?.filter(
     (brewery: IBrewery) => brewery.id === id
   );
 
@@ -48,7 +48,7 @@ const Brewery: NextPageWithLayout = () => {
 
   return (
     <div className="bg-black text-slate-300 flex flex-col flex-1 items-center justify-center p-2">
-      {filteredBrewery?.map((brewery: IBrewery) => {
+      {filteredBreweries?.map((brewery: IBrewery) => {
         return <SingleBrewery key={brewery.id} brewery={brewery} />;
       })}
     </div>

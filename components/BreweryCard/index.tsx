@@ -9,11 +9,9 @@ type BreweryProps = {
 export function BreweryCard({ brewery }: BreweryProps): ReactElement {
   return (
     <div className="card bg-slate-800 shadow-xl h-full">
-      <div className="card-body flex flex-col flex-1">
-        <h2 className="card-title flex flex-wrap items-center justify-center">
-          {brewery.name}
-        </h2>
-        <div className="card-actions justify-center">
+      <div className="card-body flex flex-col flex-1 items-center justify-center">
+        <h2 className="card-title flex flex-wrap">{brewery.name}</h2>
+        <div className="card-actions flex flex-col justify-center items-center">
           {brewery.website_url ? (
             <Link
               href={`${brewery?.website_url}`}
@@ -24,6 +22,12 @@ export function BreweryCard({ brewery }: BreweryProps): ReactElement {
           ) : (
             <div className="text-sm">No brewery site available</div>
           )}
+          <Link
+            href={`/BreweryPage/${brewery.id}`}
+            className="text-slate-200 btn btn-primary"
+          >
+            Data Page
+          </Link>
         </div>
       </div>
     </div>

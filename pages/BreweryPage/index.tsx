@@ -3,8 +3,8 @@ import Layout from '../../components/Layout';
 import { QueryClient, dehydrate } from '@tanstack/react-query';
 import { GetStaticProps } from 'next';
 import { fetchIBreweries, useBreweries } from '../../hooks/useBreweries';
-import { IBrewery } from '../../src/lib/interfaces/IBreweries';
 import { BreweryCard } from '../../components';
+import { IBrewery } from '../../src/lib/interfaces/IBreweries';
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();

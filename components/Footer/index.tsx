@@ -1,11 +1,15 @@
 import { ReactElement } from 'react';
+import Link from 'next/link';
 
 export default function Footer(): ReactElement {
   return (
-    <footer className="flex flex-wrap justify-center items-center p-2 bg-slate-800 mt-auto">
-      <a className="text-slate-400 ml-5" href="https://blog.kanebroslab.com">
+    <footer className="flex flex-row justify-center items-center p-2">
+      <Link
+        href="https://blog.kanebroslab.com"
+        className="flex flex-col flex-1 items-center justify-center"
+      >
         See My HomeLab Blog
-      </a>
+      </Link>
     </footer>
   );
 }

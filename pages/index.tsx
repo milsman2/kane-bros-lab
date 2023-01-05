@@ -17,6 +17,12 @@ const Home: NextPageWithLayout = () => {
       >
         Fetched via Open Brewery DB
       </Link>
+      <Link
+        className="btn btn-xs bg-slate-700 mt-24 items-center justify-center"
+        href="https://www.buymeacoffee.com/milsman2"
+      >
+        Buy me a coffee!
+      </Link>
     </div>
   );
 };

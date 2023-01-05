@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kane-bros-lab
-  labels: 
+  labels:
     app: kane-bros-lab
 spec:
   selector:
@@ -17,20 +17,20 @@ spec:
       nodeSelector:
         nodeCategory: worker
       containers:
-      - name: kane-bros-lab
-        image: milsman2/kane-bros-lab
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 3000
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 3000
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 3000
-        resources:
-          requests:
-            cpu: 100m
-            memory: 128Mi
+        - name: kane-bros-lab
+          image: milsman2/kane-bros-lab
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3000
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi

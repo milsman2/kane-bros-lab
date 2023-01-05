@@ -7,17 +7,17 @@ metadata:
 spec:
   ingressClassName: nginx
   tls:
-  - hosts:
-    - kanebroslab.com
-    secretName: kane-bros-lab-tls-v1
+    - hosts:
+        - kanebroslab.com
+      secretName: kane-bros-lab-tls-v1
   rules:
-  - host: kanebroslab.com
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: kane-bros-lab
-            port:
-              number: 80
+    - host: kanebroslab.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: kane-bros-lab
+                port:
+                  number: 80

@@ -1,12 +1,17 @@
 import { IBrewery } from '../../src/lib/interfaces/IBreweries';
 
+type SingleBreweryProps = Pick<
+  IBrewery,
+  'name' | 'street' | 'brewery_type' | 'phone' | 'updated_at'
+>;
+
 export default function SingleBrewery({
   name,
   street,
   brewery_type,
   phone,
   updated_at,
-}: IBrewery) {
+}: SingleBreweryProps) {
   return (
     <>
       <div className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-slate-300 md:text-5xl lg:text-6xl">

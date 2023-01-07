@@ -2,7 +2,13 @@ import { ReactElement } from 'react';
 import { IBrewery } from '../../src/lib/interfaces/IBreweries';
 import Link from 'next/link';
 
-export function BreweryCard({ id, name, website_url }: IBrewery): ReactElement {
+type BreweryCardProps = Pick<IBrewery, 'id' | 'name' | 'website_url'>;
+
+export function BreweryCard({
+  id,
+  name,
+  website_url,
+}: BreweryCardProps): ReactElement {
   return (
     <div className="card bg-slate-800 shadow-xl h-full">
       <div className="card-body flex flex-col flex-1 items-center justify-center">

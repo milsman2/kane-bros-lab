@@ -49,7 +49,7 @@ const Brewery: NextPageWithLayout = () => {
   return (
     <div className="bg-black text-slate-300 flex flex-col flex-1 items-center justify-center p-2">
       {filteredBreweries?.map((brewery: IBrewery) => {
-        return <SingleBrewery key={brewery.id} brewery={brewery} />;
+        return <SingleBrewery key={brewery.id} {...brewery} />;
       })}
     </div>
   );

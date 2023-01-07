@@ -37,7 +37,7 @@ const BreweryPage: NextPageWithLayout = () => {
       </h1>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 items-center gap-8">
         {data.map((brewery: IBrewery) => (
-          <BreweryCard key={brewery.id} brewery={brewery} />
+          <BreweryCard key={brewery.id} {...brewery} />
         ))}
       </div>
     </div>

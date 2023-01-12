@@ -15,12 +15,12 @@ export function BreweryCard({
         <h2 className="card-title flex flex-wrap">{name}</h2>
         <div className="card-actions flex flex-col justify-center items-center">
           {website_url ? (
-            <Link
+            <a
               href={`${website_url}`}
               className="text-slate-200 btn btn-primary"
             >
               Brewery Site
-            </Link>
+            </a>
           ) : (
             <div className="text-sm">No brewery site available</div>
           )}

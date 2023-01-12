@@ -11,18 +11,18 @@ const Home: NextPageWithLayout = () => {
       <Link href="/BreweryPage" className="text-4xl text-slate-400 underline">
         Breweries!
       </Link>
-      <Link
+      <a
         className="text-slate-400 underline p-4"
         href="https://www.openbrewerydb.org/"
       >
         Fetched via Open Brewery DB
-      </Link>
-      <Link
+      </a>
+      <a
         className="btn btn-xs bg-slate-700 mt-24 items-center justify-center"
         href="https://www.buymeacoffee.com/milsman2"
       >
         Buy me a coffee!
-      </Link>
+      </a>
     </div>
   );
 };

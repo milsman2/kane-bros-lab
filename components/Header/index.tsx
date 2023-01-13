@@ -43,9 +43,7 @@ export default function Header(): ReactElement {
               </div>
               <ul className="p-2">
                 <li>
-                  <Link href="https://thepuntersleague.com">
-                    The Punters League
-                  </Link>
+                  <a href="https://thepuntersleague.com">The Punters League</a>
                 </li>
               </ul>
             </li>
@@ -73,17 +71,15 @@ export default function Header(): ReactElement {
               </svg>
             </div>
             <ul className="p-2">
-              <Link href="https://thepuntersleague.com">
-                The Punters League
-              </Link>
+              <a href="https://thepuntersleague.com">The Punters League</a>
             </ul>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <Link className="btn" href="https://eadotechnologies.com">
+        <a className="btn" href="https://eadotechnologies.com">
           via Eado Tech.
-        </Link>
+        </a>
       </div>
     </div>
   );

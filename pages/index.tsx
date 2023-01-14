@@ -1,6 +1,22 @@
 import type { NextPageWithLayout } from './_app';
 import Layout from '../components/Layout';
 import Link from 'next/link';
+import { CatFact } from '../components/CatFact';
+import { GetStaticProps } from 'next';
+import { QueryClient, dehydrate } from '@tanstack/react-query';
+import { fetchICatFact } from '../hooks/useCatFact';
+
+export const getStaticProps: GetStaticProps = async () => {
+  const queryClient = new QueryClient();
+
+  await queryClient.prefetchQuery(['IBreweries'], () => fetchICatFact());
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  };
+};
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -23,6 +39,12 @@ const Home: NextPageWithLayout = () => {
       >
         Buy me a coffee!
       </a>
+      <h1 className="my-4 text-3xl font-extrabold tracking-tight leading-none text-slate-300 md:text-4xl lg:text-5xl">
+        Cat Fact:
+      </h1>
+      <div className="flex flex-col items-center justify-center p-6 font-semibold">
+        <CatFact />
+      </div>
     </div>
   );
 };

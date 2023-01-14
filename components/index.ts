@@ -3,3 +3,4 @@ export * from './Footer';
 export * from './Layout';
 export * from './BreweryCard';
 export * from './SingleBrewery';
+export * from './CatFact';

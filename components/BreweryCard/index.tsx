@@ -12,7 +12,9 @@ export function BreweryCard({
   return (
     <div className="card bg-slate-800 shadow-xl h-full">
       <div className="card-body flex flex-col flex-1 items-center justify-center">
-        <h2 className="card-title flex flex-wrap">{name}</h2>
+        <h2 className="card-title flex flex-wrap items-center justify-center">
+          {name}
+        </h2>
         <div className="card-actions flex flex-col justify-center items-center">
           {website_url ? (
             <a

@@ -1,12 +1,12 @@
 import Head from 'next/head';
-import Footer from './../Footer';
-import Header from './../Header';
+import { Footer } from './../Footer';
+import { Header } from './../Header';
 
 type LayoutProps = {
   children: React.ReactNode;
 };
 
-export default function Layout({ children }: LayoutProps) {
+export function Layout({ children }: LayoutProps) {
   return (
     <>
       <div className="flex flex-col flex-1 h-screen overflow-hidden">

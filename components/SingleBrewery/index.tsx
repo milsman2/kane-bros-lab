@@ -5,7 +5,7 @@ type SingleBreweryProps = Pick<
   'name' | 'street' | 'brewery_type' | 'phone' | 'updated_at'
 >;
 
-export default function SingleBrewery({
+export function SingleBrewery({
   name,
   street,
   brewery_type,

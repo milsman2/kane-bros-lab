@@ -1,5 +1,5 @@
 import { NextPageWithLayout } from '../_app';
-import Layout from '../../components/Layout';
+import { Layout } from '../../components/Layout';
 import { QueryClient, dehydrate } from '@tanstack/react-query';
 import { GetStaticProps } from 'next';
 import { fetchIBreweries, useBreweries } from '../../hooks/useBreweries';

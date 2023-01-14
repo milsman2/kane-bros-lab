@@ -1,5 +1,5 @@
 import type { NextPageWithLayout } from './_app';
-import Layout from '../components/Layout';
+import { Layout } from '../components/Layout';
 import Link from 'next/link';
 import { CatFact } from '../components/CatFact';
 import { GetStaticProps } from 'next';

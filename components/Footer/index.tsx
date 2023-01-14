@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-export default function Footer(): ReactElement {
+export function Footer(): ReactElement {
   return (
     <footer className="flex flex-row justify-center items-center p-2">
       <a

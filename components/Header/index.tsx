@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import Link from 'next/link';
 
-export default function Header(): ReactElement {
+export function Header(): ReactElement {
   return (
     <div className="navbar bg-slate-800">
       <div className="navbar-start">

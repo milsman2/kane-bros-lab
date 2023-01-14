@@ -1,15 +1,14 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { dehydrate } from '@tanstack/react-query';
-import { QueryClient } from '@tanstack/react-query';
+import { dehydrate, QueryClient } from '@tanstack/react-query';
 import {
   fetchSingleBrewery,
   useSingleBrewery,
   fetchIBreweries,
 } from '../../hooks/useBreweries';
 import { NextPageWithLayout } from '../_app';
-import Layout from '../../components/Layout';
+import { Layout } from '../../components/Layout';
 import { useRouter } from 'next/router';
-import SingleBrewery from '../../components/SingleBrewery';
+import { SingleBrewery } from '../../components/SingleBrewery';
 import { IBrewery } from '../../src/lib/interfaces/IBreweries';
 
 export const getStaticProps: GetStaticProps = async (context) => {

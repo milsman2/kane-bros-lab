@@ -31,7 +31,7 @@ const BreweryPage: NextPageWithLayout = () => {
   if (isError) return <span>Error: {error.message}</span>;
 
   return (
-    <div className="bg-black text-slate-300 hero min-h-screen">
+    <div className="bg-black text-slate-300 hero flex flex-col flex-1">
       <section className="hero-content text-center flex flex-col flex-1 items-center justify-center">
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-slate-300 md:text-5xl lg:text-6xl">
           Kane Bros. Lab Area Breweries

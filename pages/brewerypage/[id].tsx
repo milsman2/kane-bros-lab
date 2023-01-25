@@ -3,13 +3,13 @@ import { dehydrate, QueryClient } from '@tanstack/react-query';
 import {
   fetchSingleBrewery,
   useSingleBrewery,
-  fetchIBreweries,
+  fetchBreweries,
 } from '../../hooks/useBreweries';
 import { NextPageWithLayout } from '../_app';
 import { Layout } from '../../components/Layout';
 import { useRouter } from 'next/router';
 import { SingleBrewery } from '../../components/SingleBrewery';
-import { IBrewery } from '../../src/lib/interfaces/IBreweries';
+import { Brewery } from '../../src/lib/interfaces/Breweries';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context.params?.id as string;
@@ -27,8 +27,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const data = await fetchIBreweries();
-  const paths = data.map((brewery: IBrewery) => ({
+  const data = await fetchBreweries();
+  const paths = data.map((brewery: Brewery) => ({
     params: { id: brewery.id },
   }));
   return {
@@ -52,9 +52,9 @@ const Brewery: NextPageWithLayout = () => {
   if (isError) return <span>Error: {error.message}</span>;
 
   return (
-    <div className="bg-black text-slate-300 flex flex-col flex-1 items-center justify-center p-2">
+    <article className="bg-black text-slate-300 hero min-h-screen">
       <SingleBrewery {...data} />
-    </div>
+    </article>
   );
 };
 

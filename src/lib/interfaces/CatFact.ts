@@ -1,4 +1,4 @@
-export interface ICatFact {
+export interface CatFact {
   fact: string;
   length: string;
 }

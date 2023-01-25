@@ -1,8 +1,8 @@
 import { ReactElement } from 'react';
-import { IBrewery } from '../../src/lib/interfaces/IBreweries';
+import { Brewery } from '../../src/lib/interfaces/Breweries';
 import Link from 'next/link';
 
-type BreweryCardProps = Pick<IBrewery, 'id' | 'name' | 'website_url'>;
+type BreweryCardProps = Pick<Brewery, 'id' | 'name' | 'website_url'>;
 
 export function BreweryCard({
   id,
@@ -27,7 +27,7 @@ export function BreweryCard({
             <div className="text-sm">No brewery site available</div>
           )}
           <Link
-            href={`/BreweryPage/${id}`}
+            href={`/brewerypage/${id}`}
             className="text-slate-200 btn btn-primary"
           >
             Data Page

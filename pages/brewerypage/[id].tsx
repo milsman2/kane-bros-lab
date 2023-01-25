@@ -52,7 +52,7 @@ const Brewery: NextPageWithLayout = () => {
   if (isError) return <span>Error: {error.message}</span>;
 
   return (
-    <article className="bg-black text-slate-300 hero min-h-screen">
+    <article className="bg-black text-slate-300 flex flex-col flex-1">
       <SingleBrewery {...data} />
     </article>
   );

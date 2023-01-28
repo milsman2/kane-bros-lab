@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Header(): ReactElement {
   return (
@@ -52,6 +53,15 @@ export function Header(): ReactElement {
         <Link className="normal-case text-xl" href="/">
           Kane Bros. Lab
         </Link>
+        <a href="https://github.com/milsman2/kane-bros-lab">
+          <Image
+            src="/github-mark-white.png"
+            alt="Github logo"
+            width={25}
+            height={25}
+            className="mx-2"
+          />
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

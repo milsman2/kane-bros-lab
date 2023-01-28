@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { Brewery } from '../../src/lib/interfaces/Breweries';
+import { Brewery } from '../../interfaces/Breweries';
 import Link from 'next/link';
 
 type BreweryCardProps = Pick<Brewery, 'id' | 'name' | 'website_url'>;

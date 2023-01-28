@@ -5,6 +5,7 @@ import { CatFact } from '../components/CatFact';
 import { GetStaticProps } from 'next';
 import { QueryClient, dehydrate } from '@tanstack/react-query';
 import { fetchCatFact } from '../hooks/useCatFact';
+import { Dashboard } from '../components/Dashboard';
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();
@@ -40,9 +41,9 @@ const Home: NextPageWithLayout = () => {
       <h1 className="my-4 text-3xl font-extrabold tracking-tight leading-none text-slate-300 md:text-4xl lg:text-5xl">
         Cat Fact:
       </h1>
-      <strong>
+      <Dashboard>
         <CatFact />
-      </strong>
+      </Dashboard>
     </article>
   );
 };

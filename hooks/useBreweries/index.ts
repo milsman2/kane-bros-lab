@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { Brewery } from '../../src/lib/interfaces/Breweries';
+import { Brewery } from '../../interfaces/Breweries';
 
 export const fetchBreweries = async (): Promise<Brewery[]> => {
   const response = await fetch(
@@ -24,11 +24,9 @@ export const fetchSingleBrewery = async (id: string): Promise<Brewery> => {
 };
 
 export function useBreweries() {
-  return useQuery<Brewery[], Error>(['Breweries'], () => fetchBreweries());
+  return useQuery(['Breweries'], () => fetchBreweries());
 }
 
 export function useSingleBrewery(id: string) {
-  return useQuery<Brewery, Error>(['SingleBrewery', id], () =>
-    fetchSingleBrewery(id)
-  );
+  return useQuery(['SingleBrewery', id], () => fetchSingleBrewery(id));
 }

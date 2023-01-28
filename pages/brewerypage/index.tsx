@@ -4,7 +4,7 @@ import { QueryClient, dehydrate } from '@tanstack/react-query';
 import { GetStaticProps } from 'next';
 import { fetchBreweries, useBreweries } from '../../hooks/useBreweries';
 import { BreweryCard } from '../../components';
-import { Brewery } from '../../src/lib/interfaces/Breweries';
+import { Brewery } from '../../interfaces/Breweries';
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();
@@ -28,7 +28,8 @@ const BreweryPage: NextPageWithLayout = () => {
       </div>
     );
 
-  if (isError) return <span>Error: {error.message}</span>;
+  if (isError && error instanceof Error)
+    return <span>Error: {error.message}</span>;
 
   return (
     <div className="bg-black text-slate-300 flex flex-col flex-1">
@@ -37,9 +38,13 @@ const BreweryPage: NextPageWithLayout = () => {
           Kane Bros. Lab Area Breweries
         </h1>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 items-center gap-8">
-          {data.map((brewery: Brewery) => (
-            <BreweryCard key={brewery.id} {...brewery} />
-          ))}
+          {data ? (
+            data.map((brewery: Brewery) => (
+              <BreweryCard key={brewery.id} {...brewery} />
+            ))
+          ) : (
+            <div>No brewery data avilable at the moment</div>
+          )}
         </div>
       </section>
     </div>

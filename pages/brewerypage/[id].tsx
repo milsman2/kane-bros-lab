@@ -9,7 +9,7 @@ import { NextPageWithLayout } from '../_app';
 import { Layout } from '../../components/Layout';
 import { useRouter } from 'next/router';
 import { SingleBrewery } from '../../components/SingleBrewery';
-import { Brewery } from '../../src/lib/interfaces/Breweries';
+import { Brewery } from '../../interfaces/Breweries';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context.params?.id as string;
@@ -49,11 +49,16 @@ const Brewery: NextPageWithLayout = () => {
       </div>
     );
 
-  if (isError) return <span>Error: {error.message}</span>;
+  if (isError && error instanceof Error)
+    return <span>Error: {error.message}</span>;
 
   return (
     <article className="bg-black text-slate-300 flex flex-col flex-1">
-      <SingleBrewery {...data} />
+      {data ? (
+        <SingleBrewery {...data} />
+      ) : (
+        <strong>No brewery data available at the moment.</strong>
+      )}
     </article>
   );
 };

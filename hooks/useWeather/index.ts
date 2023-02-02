@@ -9,7 +9,12 @@ export type ApiFetchError = {
 
 export const fetchWeather = async (): Promise<Weather> => {
   const response = await fetch(
-    'https://api.weather.gov/gridpoints/HGX/65,96/forecast/hourly?units=us'
+    'https://api.weather.gov/gridpoints/HGX/65,96/forecast/hourly?units=us',
+    {
+      headers: {
+        'User-Agent': 'kanebroslab.com, miles.k.kane@gmail.com',
+      },
+    }
   );
 
   if (!response.ok) {

@@ -5,5 +5,9 @@ export type DashboardProps = {
 };
 
 export function Dashboard({ children }: DashboardProps): ReactElement {
-  return <h1 className="text-2xl">{children}</h1>;
+  return (
+    <h1 className="text-2xl flex flex-1 flex-col items-center justify-center">
+      {children}
+    </h1>
+  );
 }

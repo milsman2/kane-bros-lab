@@ -1,16 +1,21 @@
 import type { NextPageWithLayout } from './_app';
 import { Layout } from '../components/Layout';
 import Link from 'next/link';
-import { CatFact } from '../components/CatFact';
 import { GetStaticProps } from 'next';
 import { QueryClient, dehydrate } from '@tanstack/react-query';
-import { fetchCatFact } from '../hooks/useCatFact';
-import { Dashboard } from '../components/Dashboard';
+import { fetchWeather, useWeather, fetchCatFact } from '../hooks';
+import {
+  WeatherComponent,
+  Dashboard,
+  CatFact,
+  WeatherCard,
+} from '../components';
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();
 
   await queryClient.prefetchQuery(['CatFact'], () => fetchCatFact());
+  await queryClient.prefetchQuery(['Weather'], () => fetchWeather());
 
   return {
     props: {
@@ -20,6 +25,8 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Home: NextPageWithLayout = () => {
+  const weatherQuery = useWeather();
+
   return (
     <article className="flex flex-col flex-1 items-center justify-center bg-black text-slate-300">
       <h1 className="text-5xl font-bold">Welcome to Kane Bros. Lab</h1>
@@ -43,6 +50,11 @@ const Home: NextPageWithLayout = () => {
       </h1>
       <Dashboard>
         <CatFact />
+        <WeatherComponent query={weatherQuery}>
+          {weatherQuery.data?.properties?.periods && (
+            <WeatherCard periods={weatherQuery.data.properties.periods} />
+          )}
+        </WeatherComponent>
       </Dashboard>
     </article>
   );

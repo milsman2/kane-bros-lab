@@ -5,12 +5,14 @@ export const fetchCatFact = async (): Promise<CatFact> => {
   const response = await fetch('https://catfact.ninja/fact');
 
   if (!response.ok) {
-    throw new Error(`Whoops! We're getting a ${response.status}`);
+    throw new Error(
+      `Whoops! We're getting a Response Status: ${response.status}`
+    );
   }
 
   return await response.json();
 };
 
 export function useCatFact() {
-  return useQuery(['CatFact'], () => fetchCatFact());
+  return useQuery({ queryKey: ['CatFact'], queryFn: () => fetchCatFact() });
 }

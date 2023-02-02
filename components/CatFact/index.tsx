@@ -1,6 +1,7 @@
+import { ReactElement } from 'react';
 import { useCatFact } from '../../hooks/useCatFact';
 
-export function CatFact() {
+export function CatFact(): ReactElement {
   const { data, error, isLoading, isError } = useCatFact();
 
   if (isLoading) return <div>Loading</div>;

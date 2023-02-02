@@ -7,7 +7,9 @@ export const fetchBreweries = async (): Promise<Brewery[]> => {
   );
 
   if (!response.ok) {
-    throw new Error(`Whoops! We're getting a ${response.status}`);
+    throw new Error(
+      `Whoops! We're getting a Response Status: ${response.status}`
+    );
   }
 
   return await response.json();
@@ -17,16 +19,21 @@ export const fetchSingleBrewery = async (id: string): Promise<Brewery> => {
   const response = await fetch(`https://api.openbrewerydb.org/breweries/${id}`);
 
   if (!response.ok) {
-    throw new Error(`Whoops! We're getting a ${response.status}`);
+    throw new Error(
+      `Whoops! We're getting a Response Status: ${response.status}`
+    );
   }
 
   return await response.json();
 };
 
 export function useBreweries() {
-  return useQuery(['Breweries'], () => fetchBreweries());
+  return useQuery({ queryKey: ['Breweries'], queryFn: () => fetchBreweries() });
 }
 
 export function useSingleBrewery(id: string) {
-  return useQuery(['SingleBrewery', id], () => fetchSingleBrewery(id));
+  return useQuery({
+    queryKey: ['SingleBrewery', id],
+    queryFn: () => fetchSingleBrewery(id),
+  });
 }

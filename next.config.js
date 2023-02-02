@@ -7,6 +7,9 @@ const nextConfig = {
     locales: ['en'],
     defaultLocale: 'en',
   },
+  images: {
+    domains: ['api.weather.gov'],
+  },
 };
 
 module.exports = nextConfig;

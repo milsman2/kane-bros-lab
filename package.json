@@ -18,6 +18,8 @@
     "@types/react": "18.0.24",
     "@types/react-dom": "18.0.8",
     "daisyui": "^2.46.0",
+    "date-fns": "^2.29.3",
+    "date-fns-tz": "^2.0.0",
     "framer-motion": "^8.0.2",
     "next": "13.0.1",
     "next-auth": "^4.18.8",

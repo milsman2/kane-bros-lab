@@ -4,3 +4,6 @@ export * from './Layout';
 export * from './BreweryCard';
 export * from './SingleBrewery';
 export * from './CatFact';
+export * from './WeatherComponent';
+export * from './Dashboard';
+export * from './WeatherCard';

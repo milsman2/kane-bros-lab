@@ -11,9 +11,8 @@ export function WeatherCard({ periods }: PropertiesProp): ReactElement {
         <div key={period.number}>
           <div className="bg-slate-700 flex flex-col flex-1 w-full items-center justify-center text-xs">
             <div className="flex flex-row flex-1">
-              {period.startTime && period.startTime.toString()}
+              {period.startTime && period.startTime?.toString()}
             </div>
-            <div>{period.endTime && period.endTime.toString()}</div>
             <Image
               src={`${period.icon}`}
               alt="weather image"

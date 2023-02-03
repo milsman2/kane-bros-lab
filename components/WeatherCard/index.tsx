@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Properties, Period } from '../../interfaces/Weather';
 import { ReactElement } from 'react';
+import { formatInTimeZone } from 'date-fns-tz';
 
 type PropertiesProp = Pick<Properties, 'periods'>;
 
@@ -9,9 +10,14 @@ export function WeatherCard({ periods }: PropertiesProp): ReactElement {
     <div className="grid grid-cols-6 gap-4">
       {periods.slice(0, 12).map((period: Period) => (
         <div key={period.number}>
-          <div className="bg-slate-700 flex flex-col flex-1 w-full items-center justify-center text-xs">
+          <div className="bg-slate-700 flex flex-col flex-1 w-full items-center justify-center text-xs p-2">
             <div className="flex flex-row flex-1">
-              {period.startTime && period.startTime?.toString()}
+              {period.startTime &&
+                formatInTimeZone(
+                  new Date(period.startTime),
+                  'America/Chicago',
+                  'MM-dd-yy HH:mm zzz'
+                )}
             </div>
             <Image
               src={`${period.icon}`}

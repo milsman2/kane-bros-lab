@@ -21,11 +21,11 @@ export interface Geometry {
 }
 
 export interface Properties {
-  updated: Date;
+  updated: string;
   units: string;
   forecastGenerator: string;
-  generatedAt: Date;
-  updateTime: Date;
+  generatedAt: string;
+  updateTime: string;
   validTimes: string;
   elevation: Elevation;
   periods: Period[];
@@ -39,8 +39,8 @@ export interface Elevation {
 export interface Period {
   number: number | null;
   name: string | null;
-  startTime: Date | null;
-  endTime: Date | null;
+  startTime: string | null;
+  endTime: string | null;
   isDaytime: boolean;
   temperature: number | null;
   temperatureUnit: string | null;

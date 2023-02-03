@@ -18,5 +18,5 @@ export function WeatherComponent({
   if (query.isInitialLoading)
     return <strong className="loading">Loading Lab Area Weather...</strong>;
 
-  return <div>{children}</div>;
+  return <div className="flex flex-col flex-1">{children}</div>;
 }

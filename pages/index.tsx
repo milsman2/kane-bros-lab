@@ -45,9 +45,6 @@ const Home: NextPageWithLayout = () => {
       >
         Buy me a coffee!
       </a>
-      <h1 className="text-3xl font-extrabold tracking-tight leading-none text-slate-300 md:text-4xl lg:text-5xl">
-        Cat Fact:
-      </h1>
       <Dashboard>
         <CatFact />
         <WeatherComponent query={weatherQuery}>

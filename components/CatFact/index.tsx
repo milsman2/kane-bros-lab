@@ -10,7 +10,14 @@ export function CatFact(): ReactElement {
 
   return (
     <>
-      {data ? <div>{data.fact}</div> : <div>No cat data at the meowment.</div>}
+      {data ? (
+        <>
+          <div className="text-3xl">Cat Fact:</div>
+          <div>{data.fact}</div>
+        </>
+      ) : (
+        <div>No cat data at the meowment.</div>
+      )}
     </>
   );
 }

@@ -15,7 +15,8 @@ export function WeatherComponent({
   if (query.isError && query.error instanceof Error)
     return <strong>{query.error.message}</strong>;
 
-  if (query.isInitialLoading) return <div>Loading...</div>;
+  if (query.isInitialLoading)
+    return <strong className="loading">Loading Lab Area Weather...</strong>;
 
-  return <div className="text-slate-200">{children}</div>;
+  return <div>{children}</div>;
 }

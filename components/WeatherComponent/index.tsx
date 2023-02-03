@@ -18,5 +18,15 @@ export function WeatherComponent({
   if (query.isInitialLoading)
     return <strong className="loading">Loading Lab Area Weather...</strong>;
 
-  return <div className="flex flex-col flex-1">{children}</div>;
+  return (
+    <div className="flex flex-col flex-1 w-full items-center">
+      <div className="collapse">
+        <input type="checkbox" />
+        <div className="collapse-title text-xl font-medium flex flex-row flex-1 justify-center">
+          Lab Area Weather
+        </div>
+        <div className="collapse-content">{children}</div>
+      </div>
+    </div>
+  );
 }

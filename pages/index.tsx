@@ -29,35 +29,25 @@ const Home: NextPageWithLayout = () => {
 
   return (
     <article className="flex flex-col flex-1 items-center justify-center w-full bg-black text-slate-300">
-      <h1 className="text-5xl font-bold flex flex-col items-center justify-center m-4">
-        Welcome to Kane Bros. Lab
-      </h1>
-      <a
-        className="btn btn-xs bg-slate-700 flex flex-col items-center justify-center p-4"
-        href="https://www.buymeacoffee.com/milsman2"
-      >
-        Buy me a coffee!
-      </a>
-      <Link
-        href="/brewerypage"
-        className="text-4xl text-slate-400 underline flex flex-col p-4"
-      >
-        Breweries!
-      </Link>
-      <a
-        className="text-slate-400 underline flex flex-col p-4"
-        href="https://www.openbrewerydb.org/"
-      >
-        Fetched via Open Brewery DB
-      </a>
-
+      <h1 className="text-5xl font-bold m-4">Welcome to Kane Bros. Lab</h1>
+      <section className="flex flex-row">
+        <a
+          className="btn bg-slate-700 p-4 mx-2"
+          href="https://www.buymeacoffee.com/milsman2"
+        >
+          Buy me a coffee!
+        </a>
+        <Link href="/brewerypage" className="btn bg-slate-700 p-4 mx-2">
+          Breweries!
+        </Link>
+      </section>
       <Dashboard>
-        <CatFact />
         <WeatherComponent query={weatherQuery}>
           {weatherQuery.data?.properties?.periods && (
             <WeatherCard periods={weatherQuery.data.properties.periods} />
           )}
         </WeatherComponent>
+        <CatFact />
       </Dashboard>
     </article>
   );

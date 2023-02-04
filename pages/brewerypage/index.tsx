@@ -29,14 +29,24 @@ const BreweryPage: NextPageWithLayout = () => {
     );
 
   if (isError && error instanceof Error)
-    return <span>Error: {error.message}</span>;
+    return (
+      <strong className="flex flex-col flex-1 items-center justify-center">
+        Error: {error.message}
+      </strong>
+    );
 
   return (
     <div className="bg-black text-slate-300 flex flex-col flex-1">
-      <section className="text-center flex flex-col flex-1 items-center justify-center">
+      <section className="text-center">
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-slate-300 md:text-5xl lg:text-6xl">
           Kane Bros. Lab Area Breweries
         </h1>
+        <a
+          className="text-slate-400 underline p-4"
+          href="https://www.openbrewerydb.org/"
+        >
+          Fetched via Open Brewery DB
+        </a>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 items-center gap-8">
           {data ? (
             data.map((brewery: Brewery) => (

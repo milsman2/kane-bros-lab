@@ -19,12 +19,10 @@ export function WeatherComponent({
     return <strong className="loading">Loading Lab Area Weather...</strong>;
 
   return (
-    <div className="flex flex-col m-4">
-      <div className="collapse">
-        <input type="checkbox" />
-        <div className="collapse-title bg-slate-800">Lab Area Weather</div>
-        <div className="collapse-content m-4">{children}</div>
-      </div>
+    <div className="collapse">
+      <input type="checkbox" />
+      <div className="collapse-title bg-slate-800">Lab Area Weather</div>
+      <div className="collapse-content m-4">{children}</div>
     </div>
   );
 }

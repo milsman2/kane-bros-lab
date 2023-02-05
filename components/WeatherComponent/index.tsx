@@ -20,7 +20,11 @@ export function WeatherComponent({
 
   return (
     <div className="collapse">
-      <input type="checkbox" />
+      <input
+        type="checkbox"
+        id="weather_dropdown"
+        aria-label="weather_dropdown"
+      />
       <div className="collapse-title bg-slate-800">Lab Area Weather</div>
       <div className="collapse-content m-4">{children}</div>
     </div>

@@ -7,28 +7,31 @@ type PropertiesProp = Pick<Properties, 'periods'>;
 
 export function WeatherCard({ periods }: PropertiesProp): ReactElement {
   return (
-    <div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-4">
+    <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 gap-2">
       {periods.slice(0, 12).map((period: Period) => (
-        <div key={period.number}>
-          <div className="bg-slate-700 flex flex-col flex-1 w-full items-center justify-center text-xs p-2">
-            <div className="flex flex-row flex-1">
-              {period.startTime &&
-                formatInTimeZone(
-                  new Date(period.startTime),
-                  'America/Chicago',
-                  'MM-dd-yy HH:mm zzz'
-                )}
-            </div>
-            <Image
-              src={`${period.icon}`}
-              alt="weather image"
-              width={56}
-              height={56}
-            />
-            <div>
-              {period.temperature} {period.temperatureUnit}
-            </div>
-            <div>{period.shortForecast}</div>
+        <div
+          key={period.number}
+          className="flex flex-col flex-1 items-center justify-center bg-slate-700"
+        >
+          <div className="flex flex-row flex-1 text-xs">
+            {period.startTime &&
+              formatInTimeZone(
+                new Date(period.startTime),
+                'America/Chicago',
+                'MM-dd-yy HH:mm zzz'
+              )}
+          </div>
+          <Image
+            src={`${period.icon}`}
+            alt="weather image"
+            width={56}
+            height={56}
+          />
+          <div className="flex flex-row flex-1 text-xs">
+            {period.temperature} {period.temperatureUnit}
+          </div>
+          <div className="flex flex-row flex-1 text-xs">
+            {period.shortForecast}
           </div>
         </div>
       ))}

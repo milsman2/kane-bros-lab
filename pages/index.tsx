@@ -36,18 +36,20 @@ const Home: NextPageWithLayout = () => {
 
   return (
     <article className="flex flex-col flex-1 items-center justify-center w-full bg-black text-slate-300">
-      <h1 className="text-5xl font-bold m-4">Welcome to Kane Bros. Lab</h1>
-      <section className="flex flex-row m-2">
-        <a
-          className="btn bg-slate-700 p-4 mx-2"
-          href="https://www.buymeacoffee.com/milsman2"
-        >
-          Buy me a coffee!
-        </a>
-        <Link href="/brewerypage" className="btn bg-slate-700 p-4 mx-2">
-          Breweries!
-        </Link>
-      </section>
+      <div className="flex flex-col flex-1 items-center justify-center">
+        <h1 className="text-5xl font-bold m-2">Welcome to Kane Bros. Lab</h1>
+        <section className="flex flex-row m-2">
+          <a
+            className="btn bg-slate-700 p-4 mx-2"
+            href="https://www.buymeacoffee.com/milsman2"
+          >
+            Buy me a coffee!
+          </a>
+          <Link href="/brewerypage" className="btn bg-slate-700 p-2 mx-2">
+            Breweries!
+          </Link>
+        </section>
+      </div>
       <Dashboard>
         <WeatherComponent query={weatherQuery}>
           {weatherQuery.data?.properties?.periods && (
@@ -55,7 +57,7 @@ const Home: NextPageWithLayout = () => {
           )}
         </WeatherComponent>
         <Tech>
-          <section className="grid grid-cols-3 bg-slate-600 items-center justify-between content-center">
+          <section className="grid grid-cols-6 bg-slate-600 items-center justify-between content-center">
             <Image src={logolight} alt="React Query logo" />
             <Image src={nextjsseeklogo} alt="Next.js logo" />
             <Image src={prettierbannerdark} alt="Prettier logo" />

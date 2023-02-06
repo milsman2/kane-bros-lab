@@ -11,9 +11,9 @@ export function CatFact(): ReactElement {
   return (
     <>
       {data ? (
-        <section className="flex flex-col">
-          <div className="text-3xl">Cat Fact:</div>
-          <div>{data.fact}</div>
+        <section className="flex flex-col flex-1 items-center justify-center">
+          <div className="text-xl">Cat Fact:</div>
+          <div className="text-xs">{data.fact}</div>
         </section>
       ) : (
         <div>No cat data at the meowment.</div>

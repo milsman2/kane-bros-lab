@@ -17,9 +17,7 @@ export function Layout({ children }: NestedChildren) {
           />
         </Head>
         <Header />
-        <main className="flex flex-col flex-1 overflow-y-scroll">
-          {children}
-        </main>
+        <main className="flex flex-col flex-1 overflow-auto">{children}</main>
         <Footer />
       </div>
     </>

@@ -25,8 +25,12 @@ export function WeatherComponent({
         id="weather_dropdown"
         aria-label="weather_dropdown"
       />
-      <div className="collapse-title bg-slate-800">Lab Area Weather</div>
-      <div className="collapse-content m-4">{children}</div>
+      <div className="collapse-title bg-slate-800 flex flex-col text-sm flex-1">
+        Lab Area Weather
+      </div>
+      <div className="collapse-content m-4 flex flex-col flex-1 text-sm">
+        {children}
+      </div>
     </div>
   );
 }

@@ -37,8 +37,8 @@ const Home: NextPageWithLayout = () => {
   return (
     <article className="flex flex-col flex-1 items-center justify-center w-full bg-black text-slate-300">
       <div className="flex flex-col flex-1 items-center justify-center">
-        <h1 className="text-5xl font-bold m-2">Welcome to Kane Bros. Lab</h1>
-        <section className="flex flex-row m-2">
+        <h1 className="text-5xl font-bold m-1">Welcome to Kane Bros. Lab</h1>
+        <section className="flex flex-row m-1">
           <a
             className="btn bg-slate-700 p-4 mx-2"
             href="https://www.buymeacoffee.com/milsman2"
@@ -57,13 +57,11 @@ const Home: NextPageWithLayout = () => {
           )}
         </WeatherComponent>
         <Tech>
-          <section className="grid grid-cols-6 bg-slate-600 items-center justify-between content-center">
-            <Image src={logolight} alt="React Query logo" />
-            <Image src={nextjsseeklogo} alt="Next.js logo" />
-            <Image src={prettierbannerdark} alt="Prettier logo" />
-            <Image src={dockerlogo} alt="Docker logo" />
-            <Image src={tailwind} alt="Tailwind logo" />
-          </section>
+          <Image src={logolight} alt="React Query logo" className='flex flex-col flex-1 items-center justify-center' />
+          <Image src={nextjsseeklogo} alt="Next.js logo" className='flex flex-col flex-1 items-center justify-center' />
+          <Image src={prettierbannerdark} alt="Prettier logo" className='flex flex-col flex-1 items-center justify-center' />
+          <Image src={dockerlogo} alt="Docker logo" className='flex flex-col flex-1 items-center justify-center' />
+          <Image src={tailwind} alt="Tailwind logo" className='flex flex-col flex-1 items-center justify-center' />
         </Tech>
         <CatFact />
       </Dashboard>

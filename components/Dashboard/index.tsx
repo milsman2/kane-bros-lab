@@ -5,5 +5,5 @@ export type DashboardProps = {
 };
 
 export function Dashboard({ children }: DashboardProps): ReactElement {
-  return <article className="flex flex-col flex-1">{children}</article>;
+  return <article className="flex flex-col">{children}</article>;
 }

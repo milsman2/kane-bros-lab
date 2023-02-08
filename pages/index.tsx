@@ -12,11 +12,11 @@ import {
   WeatherCard,
   Tech,
 } from '../components';
-import logolight from '../public/logolight.png';
-import nextjsseeklogo from '../public/nextjsseeklogo.com.png';
-import tailwind from '../public/tailwind.png';
-import prettierbannerdark from '../public/prettierbannerdark.png';
+import nextjsicon from '../public/nextjsicon.webp';
+import tailwindcsslogo from '../public/tailwindcsslogo.webp';
 import dockerlogo from '../public/dockerlogo.webp';
+import prettierlogodark from '../public/prettierlogodark.webp'
+import reactquerylogo from '../public/reactquerylogo.webp'
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();
@@ -35,7 +35,7 @@ const Home: NextPageWithLayout = () => {
   const weatherQuery = useWeather();
 
   return (
-    <article className="flex flex-col flex-1 items-center justify-center w-full bg-black text-slate-300">
+    <article className="h-full items-center justify-center w-full bg-black text-slate-300">
       <div className="flex flex-col flex-1 items-center justify-center">
         <h1 className="text-5xl font-bold m-1">Welcome to Kane Bros. Lab</h1>
         <section className="flex flex-row m-1">
@@ -57,11 +57,11 @@ const Home: NextPageWithLayout = () => {
           )}
         </WeatherComponent>
         <Tech>
-          <Image src={logolight} alt="React Query logo" className='flex flex-col flex-1 items-center justify-center' />
-          <Image src={nextjsseeklogo} alt="Next.js logo" className='flex flex-col flex-1 items-center justify-center' />
-          <Image src={prettierbannerdark} alt="Prettier logo" className='flex flex-col flex-1 items-center justify-center' />
-          <Image src={dockerlogo} alt="Docker logo" className='flex flex-col flex-1 items-center justify-center' />
-          <Image src={tailwind} alt="Tailwind logo" className='flex flex-col flex-1 items-center justify-center' />
+          <Image src={reactquerylogo} alt="React Query logo" />
+          <Image src={nextjsicon} alt="Next.js logo" />
+          <Image src={prettierlogodark} alt="Prettier logo" />
+          <Image src={dockerlogo} alt="Docker logo" />
+          <Image src={tailwindcsslogo} alt="Tailwind logo" />
         </Tech>
         <CatFact />
       </Dashboard>

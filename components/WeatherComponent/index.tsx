@@ -26,14 +26,20 @@ export function WeatherComponent({
         aria-label="weather_dropdown"
       />
       <div className="collapse-title bg-slate-800">
-        <div className='flex flex-row items-center'>
+        <div className="flex flex-row items-center">
           Lab Area Weather
-          <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+          <svg
+            className="fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+          >
+            <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+          </svg>
         </div>
       </div>
-      <div className="collapse-content m-2">
-        {children}
-      </div>
+      <div className="collapse-content m-2">{children}</div>
     </div>
   );
 }

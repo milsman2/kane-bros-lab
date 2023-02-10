@@ -12,7 +12,7 @@ export function CatFact(): ReactElement {
     <>
       {data ? (
         <section className="flex flex-col flex-1 items-center justify-center">
-          <div className="text-xl">Cat Fact:</div>
+          <div className="text-large">Cat Fact:</div>
           <div className="text-xs">{data.fact}</div>
         </section>
       ) : (

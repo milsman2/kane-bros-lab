@@ -30,9 +30,11 @@ const Home: NextPageWithLayout = () => {
 
   return (
     <article className="items-center justify-evenly flex flex-col flex-1 w-full bg-black text-slate-300">
-      <section className='flex flex-col flex-1 items-center py-24'>
-        <h1 className="lg:text-5xl md:text-4xl sm:text-3xl font-bold m-1 flex flex-row">Welcome to Kane Bros. Lab</h1>
-        <div className='flex flex-row items-center m-2'>
+      <section className="flex flex-col flex-1 items-center py-8">
+        <h1 className="lg:text-5xl md:text-4xl sm:text-3xl font-bold m-1">
+          Welcome to Kane Bros. Lab
+        </h1>
+        <div className="flex flex-row items-center m-2">
           <a
             className="btn bg-slate-700 lg:text-sm md:text-xs sm:text-xs"
             href="https://www.buymeacoffee.com/milsman2"
@@ -52,8 +54,8 @@ const Home: NextPageWithLayout = () => {
         </WeatherComponent>
         <Tech />
         <CatFact />
-      </Dashboard >
-    </article >
+      </Dashboard>
+    </article>
   );
 };
 

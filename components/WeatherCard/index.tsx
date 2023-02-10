@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Properties, Period } from '../../interfaces/Weather';
 import { ReactElement } from 'react';
 import { formatInTimeZone } from 'date-fns-tz';
@@ -21,12 +20,6 @@ export function WeatherCard({ periods }: PropertiesProp): ReactElement {
                 'MM-dd-yy HH:mm zzz'
               )}
           </div>
-          <Image
-            src={`${period.icon}`}
-            alt="weather image"
-            width={56}
-            height={56}
-          />
           <div className="flex flex-row flex-1 text-xs">
             {period.temperature} {period.temperatureUnit}
           </div>

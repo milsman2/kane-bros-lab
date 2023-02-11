@@ -31,17 +31,17 @@ const Home: NextPageWithLayout = () => {
   return (
     <article className="items-center justify-evenly flex flex-col flex-1 bg-black text-slate-300">
       <section className="flex flex-col flex-1 items-center">
-        <h1 className="lg:text-5xl md:text-4xl sm:text-3xl font-bold m-1">
+        <h1 className="text-2xl lg:text-5xl md:text-4xl sm:text-3xl font-bold m-1">
           Welcome to Kane Bros. Lab
         </h1>
-        <div className="flex flex-row items-center m-2 ">
+        <div className="flex flex-row items-center m-1">
           <a
-            className="btn"
+            className="btn text-xs mx-2"
             href="https://www.buymeacoffee.com/milsman2"
           >
             Buy me a coffee!
           </a>
-          <Link href="/brewerypage" className="btn">
+          <Link href="/brewerypage" className="btn text-xs mx-2">
             Breweries!
           </Link>
         </div>

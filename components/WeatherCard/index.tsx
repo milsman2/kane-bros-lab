@@ -6,7 +6,7 @@ type PropertiesProp = Pick<Properties, 'periods'>;
 
 export function WeatherCard({ periods }: PropertiesProp): ReactElement {
   return (
-    <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 gap-2">
+    <div className="grid grid-cols-2 lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 gap-2">
       {periods.slice(0, 12).map((period: Period) => (
         <div
           key={period.number}

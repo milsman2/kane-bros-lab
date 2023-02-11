@@ -4,9 +4,19 @@ import { useCatFact } from '../../hooks/useCatFact';
 export function CatFact(): ReactElement {
   const { data, error, isLoading, isError } = useCatFact();
 
-  if (isLoading) return <div className='flex flex-col items-center justify-center btn btn-loading'>Loading cat fact...</div>;
+  if (isLoading)
+    return (
+      <div className="flex flex-col items-center justify-center btn btn-loading">
+        Loading cat fact...
+      </div>
+    );
 
-  if (isError && error instanceof Error) return <div className='flex flex-col items-center justify-center btn btn-loading'>{error.message}</div>;
+  if (isError && error instanceof Error)
+    return (
+      <div className="flex flex-col items-center justify-center btn btn-loading">
+        {error.message}
+      </div>
+    );
 
   return (
     <>

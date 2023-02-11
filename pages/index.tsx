@@ -29,19 +29,19 @@ const Home: NextPageWithLayout = () => {
   const weatherQuery = useWeather();
 
   return (
-    <article className="items-center justify-evenly flex flex-col flex-1 w-full bg-black text-slate-300">
-      <section className="flex flex-col flex-1 items-center py-8">
+    <article className="items-center justify-evenly flex flex-col flex-1 bg-black text-slate-300">
+      <section className="flex flex-col flex-1 items-center">
         <h1 className="lg:text-5xl md:text-4xl sm:text-3xl font-bold m-1">
           Welcome to Kane Bros. Lab
         </h1>
-        <div className="flex flex-row items-center m-2">
+        <div className="flex flex-row items-center m-2 ">
           <a
-            className="btn bg-slate-700 lg:text-sm md:text-xs sm:text-xs"
+            className="btn"
             href="https://www.buymeacoffee.com/milsman2"
           >
             Buy me a coffee!
           </a>
-          <Link href="/brewerypage" className="btn bg-slate-700">
+          <Link href="/brewerypage" className="btn">
             Breweries!
           </Link>
         </div>

@@ -43,13 +43,15 @@ const Home: NextPageWithLayout = () => {
           Breweries!
         </Link>
       </div>
-      <WeatherComponent query={weatherQuery}>
-        {weatherQuery.data?.properties?.periods && (
-          <WeatherCard periods={weatherQuery.data.properties.periods} />
-        )}
-      </WeatherComponent>
-      <Tech />
-      <CatFact />
+      <section className='flex flex-col flex-1'>
+        <WeatherComponent query={weatherQuery}>
+          {weatherQuery.data?.properties?.periods && (
+            <WeatherCard periods={weatherQuery.data.properties.periods} />
+          )}
+        </WeatherComponent>
+        <Tech />
+        <CatFact />
+      </section>
     </section>
   );
 };

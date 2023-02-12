@@ -7,3 +7,6 @@ export * from './CatFact';
 export * from './WeatherComponent';
 export * from './WeatherCard';
 export * from './Tech';
+export * from './WelcomeMessage';
+export * from './HomePageLinks';
+export * from './Dashboard';

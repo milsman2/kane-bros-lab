@@ -8,9 +8,10 @@ import {
   WeatherCard,
   Tech,
   Layout,
+  WelcomeMessage,
+  HomePageLinks,
+  Dashboard,
 } from '../components';
-import { Dashboard } from '../components/Dashboard';
-import { HomePageLinks } from '../components/HomePageLinks';
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();
@@ -29,10 +30,8 @@ const Home: NextPageWithLayout = () => {
   const weatherQuery = useWeather();
 
   return (
-    <section className="flex flex-col items-center justify-center bg-black text-slate-300">
-      <h1 className="text-2xl lg:text-5xl md:text-4xl sm:text-3xl flex flex-row flex-wrap font-bold m-1">
-        Welcome to Kane Bros. Lab
-      </h1>
+    <section className="flex flex-col min-h-full items-center justify-center bg-black text-slate-300">
+      <WelcomeMessage />
       <HomePageLinks />
       <Dashboard>
         <WeatherComponent query={weatherQuery}>

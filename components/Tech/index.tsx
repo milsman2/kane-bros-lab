@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export function Tech() {
   return (
-    <div className="w-full flex flex-row flex-wrap items-center bg-slate-600 m-4">
+    <div className="flex flex-row flex-wrap items-center bg-slate-600 m-4">
       <div className="relative h-24 flex flex-col flex-1">
         <Image
           src={nextjsicon}

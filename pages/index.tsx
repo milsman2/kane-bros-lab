@@ -10,6 +10,7 @@ import {
   Tech,
   Layout,
 } from '../components';
+import { Dashboard } from '../components/Dashboard';
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();
@@ -43,7 +44,7 @@ const Home: NextPageWithLayout = () => {
           Breweries!
         </Link>
       </div>
-      <section className='flex flex-col flex-1'>
+      <Dashboard>
         <WeatherComponent query={weatherQuery}>
           {weatherQuery.data?.properties?.periods && (
             <WeatherCard periods={weatherQuery.data.properties.periods} />
@@ -51,7 +52,7 @@ const Home: NextPageWithLayout = () => {
         </WeatherComponent>
         <Tech />
         <CatFact />
-      </section>
+      </Dashboard>
     </section>
   );
 };

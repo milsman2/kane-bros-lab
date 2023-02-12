@@ -3,7 +3,13 @@ import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { QueryClient, dehydrate } from '@tanstack/react-query';
 import { fetchWeather, useWeather, fetchCatFact } from '../hooks';
-import { WeatherComponent, CatFact, WeatherCard, Tech, Layout } from '../components';
+import {
+  WeatherComponent,
+  CatFact,
+  WeatherCard,
+  Tech,
+  Layout,
+} from '../components';
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();
@@ -22,7 +28,7 @@ const Home: NextPageWithLayout = () => {
   const weatherQuery = useWeather();
 
   return (
-    <section className="flex flex-col flex-1 items-center bg-black text-slate-300">
+    <section className="flex flex-col flex-1 items-center justify-center bg-black text-slate-300">
       <h1 className="text-2xl lg:text-5xl md:text-4xl sm:text-3xl flex flex-row flex-wrap font-bold m-1">
         Welcome to Kane Bros. Lab
       </h1>
@@ -37,14 +43,12 @@ const Home: NextPageWithLayout = () => {
           Breweries!
         </Link>
       </div>
-      <article className="flex flex-col flex-1 items-center justify-center">
-        <WeatherComponent query={weatherQuery}>
-          {weatherQuery.data?.properties?.periods && (
-            <WeatherCard periods={weatherQuery.data.properties.periods} />
-          )}
-        </WeatherComponent>
-        <Tech />
-      </article>
+      <WeatherComponent query={weatherQuery}>
+        {weatherQuery.data?.properties?.periods && (
+          <WeatherCard periods={weatherQuery.data.properties.periods} />
+        )}
+      </WeatherComponent>
+      <Tech />
       <CatFact />
     </section>
   );

@@ -10,9 +10,9 @@ export function WeatherCard({ periods }: PropertiesProp): ReactElement {
       {periods.slice(0, 12).map((period: Period) => (
         <div
           key={period.number}
-          className='flex flex-col items-center justify-center p-2'
+          className="flex flex-col items-center justify-center p-2"
         >
-          <div className="text-xl">
+          <div className="text-base sm:text-sm lg:text-lg">
             {period.startTime &&
               formatInTimeZone(
                 new Date(period.startTime),
@@ -20,10 +20,10 @@ export function WeatherCard({ periods }: PropertiesProp): ReactElement {
                 'MM-dd-yy HH:mm zzz'
               )}
           </div>
-          <div className="text-xl">
+          <div className="text-base sm:text-sm lg:text-lg">
             {period.temperature} {period.temperatureUnit}
           </div>
-          <div className="text-xl">
+          <div className="text-base sm:text-sm lg:text-lg">
             {period.shortForecast}
           </div>
         </div>

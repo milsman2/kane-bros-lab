@@ -14,6 +14,7 @@ export function Tech() {
           alt="Next.js logo"
           fill={true}
           className="object-contain"
+          sizes="20vw"
         />
       </div>
       <div className="relative h-24 flex flex-col flex-1">
@@ -22,6 +23,7 @@ export function Tech() {
           alt="Tailwind logo"
           fill={true}
           className="object-contain"
+          sizes="20vw"
         />
       </div>
       <div className="relative h-24 flex flex-col flex-1">
@@ -30,6 +32,7 @@ export function Tech() {
           alt="Next.js logo"
           fill={true}
           className="object-contain"
+          sizes="20vw"
         />
       </div>
       <div className="relative h-24 flex flex-col flex-1">
@@ -38,6 +41,7 @@ export function Tech() {
           alt="Next.js logo"
           fill={true}
           className="object-contain"
+          sizes="20vw"
         />
       </div>
       <div className="relative h-24 flex flex-col flex-1 ">
@@ -46,6 +50,7 @@ export function Tech() {
           alt="Next.js logo"
           fill={true}
           className="object-contain"
+          sizes="20vw"
         />
       </div>
     </div>

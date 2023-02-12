@@ -1,5 +1,4 @@
 import type { NextPageWithLayout } from './_app';
-import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { QueryClient, dehydrate } from '@tanstack/react-query';
 import { fetchWeather, useWeather, fetchCatFact } from '../hooks';
@@ -11,6 +10,7 @@ import {
   Layout,
 } from '../components';
 import { Dashboard } from '../components/Dashboard';
+import { HomePageLinks } from '../components/HomePageLinks';
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();
@@ -33,17 +33,7 @@ const Home: NextPageWithLayout = () => {
       <h1 className="text-2xl lg:text-5xl md:text-4xl sm:text-3xl flex flex-row flex-wrap font-bold m-1">
         Welcome to Kane Bros. Lab
       </h1>
-      <div className="flex flex-row items-center m-1">
-        <a
-          className="btn text-xs mx-2"
-          href="https://www.buymeacoffee.com/milsman2"
-        >
-          Buy me a coffee!
-        </a>
-        <Link href="/brewerypage" className="btn text-xs mx-2">
-          Breweries!
-        </Link>
-      </div>
+      <HomePageLinks />
       <Dashboard>
         <WeatherComponent query={weatherQuery}>
           {weatherQuery.data?.properties?.periods && (

@@ -29,7 +29,7 @@ const Home: NextPageWithLayout = () => {
   const weatherQuery = useWeather();
 
   return (
-    <section className="flex flex-col flex-1 items-center justify-center bg-black text-slate-300">
+    <section className="flex flex-col items-center justify-center bg-black text-slate-300">
       <h1 className="text-2xl lg:text-5xl md:text-4xl sm:text-3xl flex flex-row flex-wrap font-bold m-1">
         Welcome to Kane Bros. Lab
       </h1>

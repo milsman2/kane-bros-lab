@@ -7,50 +7,41 @@ import Image from 'next/image';
 
 export function Tech() {
   return (
-    <div className="flex flex-row flex-wrap items-center bg-slate-600 m-4">
-      <div className="relative h-24 flex flex-col flex-1">
-        <Image
-          src={nextjsicon}
-          alt="Next.js logo"
-          fill={true}
-          className="object-contain"
-          sizes="20vw"
-        />
-      </div>
-      <div className="relative h-24 flex flex-col flex-1">
-        <Image
-          src={tailwindcsslogo}
-          alt="Tailwind logo"
-          fill={true}
-          className="object-contain"
-          sizes="20vw"
-        />
-      </div>
-      <div className="relative h-24 flex flex-col flex-1">
+    <div className="flex flex-row flex-wrap items-center justify-evenly bg-slate-600">
+      <Image
+        src={nextjsicon}
+        alt="Next.js logo"
+        sizes="20vw"
+        className="flex flex-col flex-1 items-center justify-center m-2"
+      />
+      <Image
+        src={tailwindcsslogo}
+        alt="Tailwind logo"
+        sizes="20vw"
+        className="flex flex-col flex-1 items-center justify-center m-2"
+      />
+      <div className="flex flex-col flex-1 items-center justify-center">
         <Image
           src={prettierlogodark}
           alt="Next.js logo"
-          fill={true}
-          className="object-contain"
           sizes="20vw"
+          className="flex flex-col flex-1 items-center justify-center m-2"
         />
       </div>
-      <div className="relative h-24 flex flex-col flex-1">
+      <div className="flex flex-col flex-1 items-center justify-center">
         <Image
           src={dockerlogo}
           alt="Next.js logo"
-          fill={true}
-          className="object-contain"
           sizes="20vw"
+          className="flex flex-col flex-1 items-center justify-center m-2"
         />
       </div>
-      <div className="relative h-24 flex flex-col flex-1 ">
+      <div className="flex flex-col flex-1 items-center justify-center">
         <Image
           src={reactquerylogo}
           alt="Next.js logo"
-          fill={true}
-          className="object-contain"
           sizes="20vw"
+          className="flex flex-col flex-1 items-center justify-center m-2"
         />
       </div>
     </div>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { QueryClient, dehydrate } from '@tanstack/react-query';
 import { fetchWeather, useWeather, fetchCatFact } from '../hooks';
-import { WeatherComponent, CatFact, WeatherCard, Tech,  Layout } from '../components';
+import { WeatherComponent, CatFact, WeatherCard, Tech, Layout } from '../components';
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();
@@ -37,15 +37,15 @@ const Home: NextPageWithLayout = () => {
           Breweries!
         </Link>
       </div>
-      <article className="flex flex-col flex-1">
+      <article className="flex flex-col flex-1 items-center justify-center">
         <WeatherComponent query={weatherQuery}>
           {weatherQuery.data?.properties?.periods && (
             <WeatherCard periods={weatherQuery.data.properties.periods} />
           )}
         </WeatherComponent>
         <Tech />
-        <CatFact />
       </article>
+      <CatFact />
     </section>
   );
 };

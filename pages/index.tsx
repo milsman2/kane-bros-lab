@@ -1,10 +1,9 @@
 import type { NextPageWithLayout } from './_app';
-import { Layout } from '../components/Layout';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { QueryClient, dehydrate } from '@tanstack/react-query';
 import { fetchWeather, useWeather, fetchCatFact } from '../hooks';
-import { WeatherComponent, CatFact, WeatherCard, Tech } from '../components';
+import { WeatherComponent, CatFact, WeatherCard, Tech,  Layout } from '../components';
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();

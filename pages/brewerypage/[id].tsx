@@ -4,12 +4,11 @@ import {
   fetchSingleBrewery,
   useSingleBrewery,
   fetchBreweries,
-} from '../../hooks/useBreweries';
+} from '../../hooks/';
 import { NextPageWithLayout } from '../_app';
-import { Layout } from '../../components/Layout';
+import { Layout, SingleBrewery } from '../../components/';
 import { useRouter } from 'next/router';
-import { SingleBrewery } from '../../components/SingleBrewery';
-import { Brewery } from '../../interfaces/Breweries';
+import { Brewery } from '../../interfaces/';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const id = context.params?.id as string;

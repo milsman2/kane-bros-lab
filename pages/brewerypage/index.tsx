@@ -1,10 +1,9 @@
 import { NextPageWithLayout } from '../_app';
-import { Layout } from '../../components/Layout';
 import { QueryClient, dehydrate } from '@tanstack/react-query';
 import { GetStaticProps } from 'next';
-import { fetchBreweries, useBreweries } from '../../hooks/useBreweries';
-import { BreweryCard } from '../../components';
-import { Brewery } from '../../interfaces/Breweries';
+import { fetchBreweries, useBreweries } from '../../hooks/';
+import { BreweryCard, Layout } from '../../components';
+import { Brewery } from '../../interfaces/';
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();

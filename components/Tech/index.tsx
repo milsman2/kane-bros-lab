@@ -8,7 +8,7 @@ import Image from 'next/image';
 export function Tech() {
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row flex-1 items-center justify-evenly m-2 bg-slate-600">
+      <div className="flex flex-row items-center justify-evenly m-2 bg-slate-600">
         <Image src={nextjsicon} alt="Next.js logo" sizes="15vw" />
         <Image src={tailwindcsslogo} alt="Tailwind logo" sizes="15vw" />
         <Image src={prettierlogodark} alt="Next.js logo" sizes="15vw" />

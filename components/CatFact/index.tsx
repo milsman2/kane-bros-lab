@@ -21,7 +21,7 @@ export function CatFact(): ReactElement {
   return (
     <>
       {data ? (
-        <p className="flex flex-col items-center justify-center p-2">
+        <p className="flex flex-col items-center justify-center m-2">
           Cat Fact: {data.fact}
         </p>
       ) : (

@@ -30,7 +30,7 @@ const Home: NextPageWithLayout = () => {
   const weatherQuery = useWeather();
 
   return (
-    <section className="flex flex-col min-h-full items-center justify-center bg-black text-slate-300">
+    <section className="flex flex-col flex-1 min-h-full items-center justify-center bg-black text-slate-300">
       <WelcomeMessage />
       <HomePageLinks />
       <Dashboard>

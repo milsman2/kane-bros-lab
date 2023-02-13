@@ -6,7 +6,6 @@ import {
   WeatherComponent,
   CatFact,
   WeatherCard,
-  Tech,
   Layout,
   WelcomeMessage,
   HomePageLinks,
@@ -30,7 +29,7 @@ const Home: NextPageWithLayout = () => {
   const weatherQuery = useWeather();
 
   return (
-    <section className="flex flex-col flex-1 min-h-full items-center justify-center bg-black text-slate-300">
+    <section className="flex flex-col flex-1 items-center justify-center bg-black text-slate-300">
       <WelcomeMessage />
       <HomePageLinks />
       <Dashboard>
@@ -39,7 +38,6 @@ const Home: NextPageWithLayout = () => {
             <WeatherCard periods={weatherQuery.data.properties.periods} />
           )}
         </WeatherComponent>
-        <Tech />
         <CatFact />
       </Dashboard>
     </section>

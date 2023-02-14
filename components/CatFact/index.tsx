@@ -1,9 +1,9 @@
 import { ReactElement } from 'react';
-import { ApiFetchError, CatFact } from '../../interfaces';
+import { CatFact } from '../../interfaces';
 import { UseQueryResult } from '@tanstack/react-query';
 
 type CatQuery = {
-  query: UseQueryResult<CatFact, ApiFetchError>;
+  query: UseQueryResult<CatFact, Error>;
 };
 
 export function CatFact({ query }: CatQuery): ReactElement {

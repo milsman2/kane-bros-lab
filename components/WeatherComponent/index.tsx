@@ -1,9 +1,9 @@
 import { ReactElement, ReactNode } from 'react';
 import { UseQueryResult } from '@tanstack/react-query';
-import { Weather, ApiFetchError } from '../../interfaces/';
+import { Weather } from '../../interfaces/';
 
 type WeatherQuery = {
-  query: UseQueryResult<Weather, ApiFetchError>;
+  query: UseQueryResult<Weather, Error>;
   children: ReactNode;
 };
 

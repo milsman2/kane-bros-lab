@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
 import { Weather } from '../../interfaces/Weather';
-import { ApiFetchError } from '../../interfaces';
 
 export const fetchWeather = async (): Promise<Weather> => {
   const response = await fetch(
@@ -25,6 +24,6 @@ export function useWeather() {
   return useQuery({
     queryKey: ['Weather'],
     queryFn: () => fetchWeather(),
-    onError: (err: ApiFetchError) => err,
+    onError: (err: Error) => err,
   });
 }

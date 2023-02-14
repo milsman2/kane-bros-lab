@@ -17,7 +17,7 @@ export function Layout({ children }: NestedChildren) {
           />
         </Head>
         <Header />
-        <main className="flex flex-col h-full w-full justify-between overflow-auto relative">
+        <main className="flex flex-col h-full w-full justify-between overflow-auto">
           {children}
         </main>
         <Footer />

@@ -1,7 +1,6 @@
 import { ReactElement, ReactNode } from 'react';
 import { UseQueryResult } from '@tanstack/react-query';
-import { Weather } from '../../interfaces/Weather';
-import { ApiFetchError } from '../../hooks';
+import { Weather, ApiFetchError } from '../../interfaces/';
 
 type WeatherQuery = {
   query: UseQueryResult<Weather, ApiFetchError>;

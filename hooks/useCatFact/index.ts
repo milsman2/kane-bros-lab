@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { CatFact } from '../../interfaces/CatFact';
+import { ApiFetchError } from '../../interfaces';
 
 export const fetchCatFact = async (): Promise<CatFact> => {
   const response = await fetch('https://catfact.ninja/fact');
@@ -14,5 +15,9 @@ export const fetchCatFact = async (): Promise<CatFact> => {
 };
 
 export function useCatFact() {
-  return useQuery({ queryKey: ['CatFact'], queryFn: () => fetchCatFact() });
+  return useQuery({
+    queryKey: ['CatFact'],
+    queryFn: () => fetchCatFact(),
+    onError: (err: ApiFetchError) => err,
+  });
 }

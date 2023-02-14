@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { Brewery } from '../../interfaces/Breweries';
+import { ApiFetchError } from '../../interfaces';
 
 export const fetchBreweries = async (): Promise<Brewery[]> => {
   const response = await fetch(
@@ -35,5 +36,6 @@ export function useSingleBrewery(id: string) {
   return useQuery({
     queryKey: ['SingleBrewery', id],
     queryFn: () => fetchSingleBrewery(id),
+    onError: (err: ApiFetchError) => err,
   });
 }

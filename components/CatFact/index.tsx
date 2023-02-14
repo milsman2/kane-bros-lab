@@ -1,27 +1,30 @@
 import { ReactElement } from 'react';
-import { useCatFact } from '../../hooks/useCatFact';
+import { ApiFetchError, CatFact } from '../../interfaces';
+import { UseQueryResult } from '@tanstack/react-query';
 
-export function CatFact(): ReactElement {
-  const { data, error, isLoading, isError } = useCatFact();
+type CatQuery = {
+  query: UseQueryResult<CatFact, ApiFetchError>;
+};
 
-  if (isLoading)
+export function CatFact({ query }: CatQuery): ReactElement {
+  if (query.isInitialLoading)
     return (
       <div className="flex flex-col items-center justify-center btn btn-loading">
         Loading cat fact...
       </div>
     );
 
-  if (isError && error instanceof Error)
+  if (query.isError && query.error instanceof Error)
     return (
       <div className="flex flex-col items-center justify-center btn btn-loading">
-        {error.message}
+        {query.error.message}
       </div>
     );
 
   return (
     <>
-      {data ? (
-        <p className="flex flex-row m-2">Cat Fact: {data.fact}</p>
+      {query.data ? (
+        <p className="flex flex-row m-2">Cat Fact: {query.data.fact}</p>
       ) : (
         <div>No cat data at the meowment.</div>
       )}

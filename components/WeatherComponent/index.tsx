@@ -24,7 +24,7 @@ export function WeatherComponent({
         id="weather_dropdown"
         aria-label="weather_dropdown"
       />
-      <div className="collapse-title flex flex-row bg-slate-800">
+      <div className="collapse-title flex flex-row bg-slate-800 m-1">
         Lab Area Weather
         <svg
           className="fill-current"

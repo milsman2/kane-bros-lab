@@ -24,7 +24,9 @@ export function CatFact({ query }: CatQuery): ReactElement {
   return (
     <>
       {query.data ? (
-        <p className="flex flex-row m-2">Cat Fact: {query.data.fact}</p>
+        <p className="flex flex-row items-center justify-center m-2">
+          Cat Fact: {query.data.fact}
+        </p>
       ) : (
         <div>No cat data at the meowment.</div>
       )}

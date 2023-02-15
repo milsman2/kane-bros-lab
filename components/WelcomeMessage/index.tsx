@@ -1,6 +1,6 @@
 export function WelcomeMessage() {
   return (
-    <article className="flex flex-col items-center">
+    <>
       <h1 className="text-2xl lg:text-5xl md:text-4xl sm:text-3xl flex flex-row flex-wrap font-bold m-2">
         Welcome to Kane Bros. Lab
       </h1>
@@ -10,6 +10,6 @@ export function WelcomeMessage() {
           The Punters League
         </a>
       </section>
-    </article>
+    </>
   );
 }

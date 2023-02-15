@@ -6,7 +6,7 @@ export type DashboardProps = {
 
 export function Dashboard({ children }: DashboardProps): ReactElement {
   return (
-    <article className="flex flex-col items-center justify-around">
+    <article className="flex flex-col flex-1 items-center justify-around">
       {children}
     </article>
   );

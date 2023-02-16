@@ -8,7 +8,6 @@ import {
   Layout,
   WelcomeMessage,
   HomePageLinks,
-  Dashboard,
 } from '../components';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -27,17 +26,17 @@ const Home: NextPageWithLayout = () => {
   const weatherQuery = useWeather();
 
   return (
-    <section className="flex flex-col flex-1 items-center justify-center bg-black text-slate-300">
+    <article className="flex flex-col flex-1 items-center justify-center bg-black text-slate-300">
       <WelcomeMessage />
       <HomePageLinks />
-      <Dashboard>
+      <section className="flex flex-col flex-1 items-center justify-around">
         <WeatherComponent query={weatherQuery}>
           {weatherQuery.data?.properties?.periods && (
             <WeatherCard periods={weatherQuery.data.properties.periods} />
           )}
         </WeatherComponent>
-      </Dashboard>
-    </section>
+      </section>
+    </article>
   );
 };
 

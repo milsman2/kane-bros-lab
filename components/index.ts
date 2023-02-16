@@ -3,7 +3,6 @@ export * from './Footer';
 export * from './Layout';
 export * from './BreweryCard';
 export * from './SingleBrewery';
-export * from './CatFact';
 export * from './WeatherComponent';
 export * from './WeatherCard';
 export * from './Tech';

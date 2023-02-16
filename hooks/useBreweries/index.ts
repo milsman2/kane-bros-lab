@@ -27,8 +27,19 @@ export const fetchSingleBrewery = async (id: string): Promise<Brewery> => {
   return await response.json();
 };
 
-export function useBreweries() {
-  return useQuery({ queryKey: ['Breweries'], queryFn: () => fetchBreweries() });
+export function useBreweries(select?: (data: Brewery[]) => Brewery[]) {
+  return useQuery({
+    queryKey: ['Breweries'],
+    queryFn: () => fetchBreweries(),
+    onError: (err: Error) => err,
+    select,
+  });
+}
+
+export function useBrewerySearch(id: string) {
+  return useBreweries((data: Brewery[]) =>
+    data.filter((brewery) => brewery.id.includes(id))
+  );
 }
 
 export function useSingleBrewery(id: string) {

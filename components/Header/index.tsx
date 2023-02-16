@@ -8,7 +8,9 @@ export function Header(): ReactElement {
         <Link className="normal-case text-xl text-slate-100" href="/">
           Kane Bros. Lab
         </Link>
-        <a href="https://github.com/milsman2/kane-bros-lab">Github</a>
+        <a href="https://github.com/milsman2/kane-bros-lab" className="mx-2">
+          Github
+        </a>
       </div>
       <div className="navbar-end">
         <a className="btn text-slate-100" href="https://eadotechnologies.com">

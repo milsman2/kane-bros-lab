@@ -5,6 +5,5 @@ export * from './BreweryCard';
 export * from './SingleBrewery';
 export * from './WeatherComponent';
 export * from './WeatherCard';
-export * from './Tech';
 export * from './WelcomeMessage';
 export * from './HomePageLinks';

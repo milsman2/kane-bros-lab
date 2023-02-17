@@ -6,13 +6,13 @@ type PropertiesProp = Pick<Properties, 'periods'>;
 
 export function WeatherCard({ periods }: PropertiesProp): ReactElement {
   return (
-    <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
+    <div className="grid grid-cols-3 lg:grid-cols-6 md:grid-cols-4 gap-1 sm:gap-4">
       {periods.slice(0, 12).map((period: Period) => (
         <div
           key={period.number}
           className="flex flex-col items-center justify-center p-2"
         >
-          <div className="sm:text-xs md:text-sm">
+          <div className="text-xs md:text-sm">
             {period.startTime &&
               formatInTimeZone(
                 new Date(period.startTime),
@@ -20,10 +20,10 @@ export function WeatherCard({ periods }: PropertiesProp): ReactElement {
                 'MM-dd-yy HH:mm zzz'
               )}
           </div>
-          <div className="sm:text-xs md:text-sm">
+          <div className="text-xs md:text-sm">
             {period.temperature} {period.temperatureUnit}
           </div>
-          <div className="sm:text-xs md:text-sm">{period.shortForecast}</div>
+          <div className="text-xs md:text-sm">{period.shortForecast}</div>
         </div>
       ))}
     </div>

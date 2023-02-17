@@ -5,7 +5,7 @@ export function WelcomeMessage() {
         Welcome to Kane Bros. Lab
       </h1>
       <section className="flex flex-col m-1 items-center justify-center">
-        <p className="text-lg">Proud Incubator and Programmer of</p>
+        <p className="text-lg">Proud Incubator and Co-Programmer of</p>
         <a
           href="https://thepuntersleague.com"
           className="underline font-bold text-2xl"

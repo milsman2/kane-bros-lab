@@ -26,16 +26,14 @@ const Home: NextPageWithLayout = () => {
   const weatherQuery = useWeather();
 
   return (
-    <article className="flex flex-col flex-1 items-center justify-center bg-black text-slate-300">
+    <article className="flex flex-col flex-1 items-center justify-evenly bg-black text-slate-300">
       <WelcomeMessage />
       <HomePageLinks />
-      <section className="flex flex-col flex-1 items-center justify-around">
-        <WeatherComponent query={weatherQuery}>
-          {weatherQuery.data?.properties?.periods && (
-            <WeatherCard periods={weatherQuery.data.properties.periods} />
-          )}
-        </WeatherComponent>
-      </section>
+      <WeatherComponent query={weatherQuery}>
+        {weatherQuery.data?.properties?.periods && (
+          <WeatherCard periods={weatherQuery.data.properties.periods} />
+        )}
+      </WeatherComponent>
     </article>
   );
 };

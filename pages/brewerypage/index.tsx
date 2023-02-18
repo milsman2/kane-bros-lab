@@ -60,7 +60,7 @@ const BreweryPage: NextPageWithLayout = () => {
           onChange={(e) => setSearchValue(e.target.value)}
           className="m-4"
         />
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 items-center gap-4 m-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 items-center gap-4 m-8 p-2 rounded-md outline-double outline-8">
           {searchValue === ''
             ? brewQuery.data?.map((brewery: Brewery) => (
                 <BreweryCard key={brewery.id} {...brewery} />

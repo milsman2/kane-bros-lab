@@ -3,7 +3,7 @@ import { Brewery } from '../../interfaces/Breweries';
 
 export const fetchBreweries = async (): Promise<Brewery[]> => {
   const response = await fetch(
-    'https://api.openbrewerydb.org/breweries?by_city=houston'
+    'https://api.openbrewerydb.org/breweries?by_city=houston&per_page=50'
   );
 
   if (!response.ok) {

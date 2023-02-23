@@ -7,3 +7,4 @@ export * from './WeatherComponent';
 export * from './WeatherCard';
 export * from './WelcomeMessage';
 export * from './HomePageLinks';
+export * from './BarChart';

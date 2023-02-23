@@ -8,7 +8,6 @@ import {
   Layout,
   WelcomeMessage,
   HomePageLinks,
-  BarChart,
 } from '../components';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -35,7 +34,6 @@ const Home: NextPageWithLayout = () => {
           <WeatherCard periods={weatherQuery.data.properties.periods} />
         )}
       </WeatherComponent>
-      <BarChart />
     </article>
   );
 };

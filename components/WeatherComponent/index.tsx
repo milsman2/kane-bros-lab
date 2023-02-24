@@ -18,8 +18,8 @@ export function WeatherComponent({
     return <strong className="loading">Loading Lab Area Weather...</strong>;
 
   return (
-    <div className="flex flex-col items-center justify-center bg-slate-800 rounded-md outline-double outline-3 m-8">
-      <strong className="font-bold">Lab Area Weather</strong>
+    <div className="flex flex-col items-center justify-center bg-slate-800 rounded-md outline-double outline-3 my-8 mx-2">
+      <strong className="font-bold text-xl">Lab Area Weather</strong>
       <section className="flex flex-col">{children}</section>
     </div>
   );
